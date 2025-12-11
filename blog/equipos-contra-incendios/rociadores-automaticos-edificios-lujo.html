@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Rociadores Automáticos en Edificios Residenciales de Lujo CDMX | Toda la Construcción</title>
+    <meta name="description" content="Guía técnica sobre rociadores automáticos para desarrollos residenciales premium en CDMX. NFPA 13, diseño estético, integración BMS y casos en Santa Fe y Polanco.">
+    <meta name="keywords" content="rociadores automáticos edificios lujo, sistemas sprinklers residencial CDMX, rociadores ocultos departamentos premium, NFPA 13 México edificios altos">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 8px 0;
+            font-size: 12px;
+        }
+
+        .header-top-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-top-left a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .header-top-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-top-right a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1e40af;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #64748b;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #1e40af;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline {
+            background: #fff;
+            color: #1e40af;
+            border: 2px solid #1e40af;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #fff;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .breadcrumb a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+
+        /* Article Container */
+        .article-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .article-hero {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .article-title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .article-summary {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #6b7280;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Main Content Layout */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 12px;
+        }
+
+        .toc-list a {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.5;
+            display: block;
+            padding: 6px 0;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: #1e40af;
+            padding-left: 8px;
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 30px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-articles-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .related-article-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .related-article-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .related-article-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .related-article-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .related-article-info a {
+            color: #111827;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            transition: color 0.2s;
+        }
+
+        .related-article-info a:hover {
+            color: #1e40af;
+        }
+
+        /* Article Content */
+        .article-content {
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111827;
+            margin: 50px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e40af;
+            margin: 35px 0 20px;
+        }
+
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .article-content li {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 12px;
+        }
+
+        .article-content strong {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .article-content a {
+            color: #1e40af;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .article-content a:hover {
+            border-bottom-color: #1e40af;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 12px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            text-align: center;
+            font-size: 13px;
+            color: #6b7280;
+            margin-top: 25px;
+            font-style: italic;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #1e40af;
+            padding: 25px 30px;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h3 {
+            font-size: 18px;
+            color: #1e40af;
+            margin: 0 0 12px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table thead {
+            background: #1e40af;
+            color: white;
+        }
+
+        .comparison-table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #cbd5e1;
+            padding: 60px 20px 0;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.1);
+        }
+
+        .footer-brand .logo-footer {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-link:hover {
+            background: #1e40af;
+            border-color: #1e40af;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .footer-bottom-left {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-bottom-left a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .article-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                min-height: 350px;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+
+            .hero-content {
+                padding: 30px;
+            }
+
+            .article-content {
+                padding: 30px 20px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div class="header-top-left">
+                    <a href="mailto:contacto@todalaconstruccion.com">
+                        ✉ contacto@todalaconstruccion.com
+                    </a>
+                    <a href="tel:+525555555555">
+                        ☎ +52 (55) 5555-5555
+                    </a>
+                </div>
+                <div class="header-top-right">
+                    <a href="/ayuda">Ayuda</a>
+                    <a href="../../blog.html">Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-container">
+            <a href="../../index.html" class="logo">
+                Toda la Construcción
+                <span>| México</span>
+            </a>
+            <nav class="nav">
+                <a href="../../index.html">Inicio</a>
+                <a href="../../categorias.html">Categorías</a>
+                <a href="/empresas">Empresas</a>
+                <a href="/planes">Planes</a>
+            </nav>
+            <div class="header-buttons">
+                <a href="/login" class="btn btn-outline">Iniciar Sesión</a>
+                <a href="/registro" class="btn btn-primary">Registrar Negocio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../../index.html">Inicio</a> / <a href="../../blog.html">Blog</a> / <a href="../../blog.html">Equipos Contra Incendios</a> / Rociadores Automáticos Edificios Lujo
+        </div>
+    </div>
+
+    <!-- Article -->
+    <div class="article-wrapper">
+        <!-- Hero Section -->
+        <section class="article-hero">
+            <img src="../../img/equipos-contra-incendios/agua-a-presion.webp" alt="Sistemas de rociadores automáticos en edificios de lujo" class="hero-image">
+            <div class="hero-content">
+                <a href="../../blog.html" class="article-category">Equipos Contra Incendios</a>
+                <h1 class="article-title">Sistemas de Rociadores Automáticos en Edificios Residenciales de Lujo en CDMX</h1>
+                <p class="article-summary">
+                    Los desarrollos residenciales premium en Santa Fe, Polanco y Bosques de las Lomas requieren sistemas de rociadores automáticos de última generación que combinen máxima eficacia contra incendios con diseño estético discreto. Esta guía técnica explora tipos de sistemas, normativa NFPA 13, diseño hidráulico, rociadores ocultos y casos de éxito en los edificios más exclusivos de la Ciudad de México.
+                </p>
+                <div class="article-meta">
+                    <span class="meta-item">Lectura: 12 min</span>
+                    <span class="meta-item">Guía Técnica Premium</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Layout -->
+        <div class="content-layout">
+            <!-- Main Content -->
+            <article class="article-content">
+                <h2 id="normativa">Normativa y Requisitos en CDMX para Edificios de Altura</h2>
+                <p>
+                    El Reglamento de Construcción de la Ciudad de México 2021 establece que todos los edificios residenciales con altura superior a 25 metros deben contar con sistemas de rociadores automáticos. Esta regulación afecta prácticamente a todos los desarrollos premium en zonas como Santa Fe, Polanco, Interlomas y Bosques de las Lomas, donde las torres residenciales superan regularmente los 15 pisos.
+                </p>
+                <p>
+                    Los sistemas deben cumplir simultáneamente con la normativa mexicana NOM-002-STPS-2010 y los estándares internacionales NFPA 13 (Standard for the Installation of Sprinkler Systems), adoptados como referencia obligatoria para edificaciones de alto nivel. Las aseguradoras internacionales que protegen estos inmuebles exigen además cumplimiento estricto de NFPA 25 para mantenimiento.
+                </p>
+
+                <div class="info-box">
+                    <h3>Requisitos Específicos CDMX</h3>
+                    <p>
+                        Edificios >25m requieren: sistema de rociadores automáticos, reserva de agua dedicada (mínimo 2 horas de operación), sistema de bombeo redundante con respaldo eléctrico, gabinetes contra incendios en cada nivel, y red de hidrantes. Protección Civil CDMX realiza inspecciones anuales obligatorias. Desarrolladores como <a href="../../empresas/equipos-contra-incendios/lga-contra-incendios.html">LGA Contra Incendios</a> se especializan en diseño integral que cumple todas las normativas desde la etapa de proyecto.
+                    </p>
+                </div>
+
+                <h2 id="tipos-sistemas">Tipos de Sistemas de Rociadores para Residencial de Lujo</h2>
+
+                <h3>Sistema de Tubería Húmeda (Wet Pipe System)</h3>
+                <p>
+                    Es el tipo más común en edificios residenciales de la CDMX debido a su confiabilidad y respuesta inmediata. Las tuberías permanecen constantemente presurizadas con agua, y los rociadores se activan individualmente al detectar calor (típicamente 68°C para áreas residenciales).
+                </p>
+                <ul>
+                    <li><strong>Ventajas:</strong> Respuesta inmediata (0 segundos de retardo), mantenimiento simple, costo operativo bajo, ideal para clima templado de CDMX</li>
+                    <li><strong>Aplicación:</strong> Departamentos, pasillos, áreas comunes, amenidades, estacionamientos cubiertos</li>
+                    <li><strong>Consideraciones:</strong> Requiere protección contra congelamiento en áreas con aire acondicionado extremo (cuartos técnicos)</li>
+                </ul>
+
+                <h3>Sistema de Pre-Acción (Pre-Action System)</h3>
+                <p>
+                    Tecnología premium especificada en áreas de alto valor donde una descarga accidental causaría daños significativos. El sistema requiere dos eventos independientes para activarse: detección de humo/calor por sensores electrónicos Y fusión del elemento térmico del rociador.
+                </p>
+                <ul>
+                    <li><strong>Ventajas:</strong> Protección contra descargas accidentales, monitoreo electrónico avanzado, ideal para integración con BMS</li>
+                    <li><strong>Aplicación:</strong> Penthouses de lujo, wine rooms, cuartos de arte, bibliotecas privadas, salas de cine residenciales</li>
+                    <li><strong>Costos:</strong> 40-60% más alto que sistema húmedo, pero justificado por valor de bienes protegidos</li>
+                </ul>
+
+                <h3>Sistema Seco (Dry Pipe System)</h3>
+                <p>
+                    Utilizado en áreas no climatizadas o expuestas a temperaturas de congelamiento. Las tuberías contienen aire o nitrógeno presurizado en lugar de agua.
+                </p>
+                <ul>
+                    <li><strong>Aplicación limitada en CDMX:</strong> Principalmente en estacionamientos abiertos, terrazas cubiertas, áreas de servicio exteriores</li>
+                    <li><strong>Retardo de descarga:</strong> 30-60 segundos (el tiempo que toma purgar el aire y llenar tuberías)</li>
+                    <li><strong>Mantenimiento:</strong> Más complejo, requiere pruebas trimestrales de válvulas</li>
+                </ul>
+
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/agua-a-presion.webp" alt="Sistema de rociadores residencial">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Gabinete contra incendios">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/señalizacion-y-equipamiento.webp" alt="Señalización de sistemas">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/extintor.webp" alt="Equipamiento complementario">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/polvo-quimico-seco-pqs.webp" alt="Sistemas complementarios">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/mantenimiento-preventivo.webp" alt="Mantenimiento profesional">
+                    </div>
+                </div>
+                <p class="gallery-caption">Componentes y sistemas de rociadores automáticos en edificios residenciales de lujo</p>
+
+                <h2 id="diseno-estetico">Diseño Estético: Rociadores Ocultos y Discretos</h2>
+                <p>
+                    El principal desafío en residencias de ultra lujo es integrar sistemas de protección sin comprometer el diseño arquitectónico. Los residentes de penthouses de $30-100 millones de pesos no aceptan rociadores visibles tradicionales en sus techos de doble altura con acabados en madera noble o yeso artístico.
+                </p>
+
+                <h3>Rociadores Ocultos (Concealed Sprinklers)</h3>
+                <p>
+                    Tecnología donde el rociador queda completamente empotrado en el techo, cubierto por una placa decorativa que se funde a 57°C (temperatura inferior a la activación del rociador a 68°C). El resultado es prácticamente invisible, con solo un círculo de 25-35mm visible.
+                </p>
+                <ul>
+                    <li><strong>Acabados disponibles:</strong> Blanco, negro, cromado, dorado, bronce, copper, custom match (igualado a color específico del proyecto)</li>
+                    <li><strong>Aplicación:</strong> Salas, comedores, recámaras, estudios, pasillos de circulación</li>
+                    <li><strong>Limitación:</strong> Requieren instalación en techos de plafón falso (mínimo 15cm de plenum)</li>
+                    <li><strong>Costo incremental:</strong> 3-5x el costo de rociador estándar, pero esencial para aceptación del cliente final</li>
+                </ul>
+
+                <h3>Rociadores Sidewall (Pared Lateral)</h3>
+                <p>
+                    Para áreas sin plenum o con techos aparentes (concreto expuesto, vigas vistas), se utilizan rociadores montados en pared que descargan en patrón semicircular. Pueden integrarse discretamente en guardacantos o molduras arquitectónicas.
+                </p>
+
+                <h3>Integración Arquitectónica Avanzada</h3>
+                <p>
+                    Proyectos de nivel Polanco/Bosques trabajan con arquitectos de interiores desde fase de diseño para integrar sistemas. Estrategias incluyen:
+                </p>
+                <ul>
+                    <li>Ranurar techos de yeso para ocultar tuberías</li>
+                    <li>Diseñar plafones con registros estéticos para acceso a válvulas</li>
+                    <li>Coordinar rociadores con luminarias para distribución simétrica</li>
+                    <li>Especificar sprinklers de respuesta rápida (Quick Response) que permiten mayor espaciamiento y menos unidades visibles</li>
+                </ul>
+
+                <h2 id="diseno-hidraulico">Diseño Hidráulico y Cálculos de Demanda</h2>
+                <p>
+                    El diseño hidráulico es la ingeniería crítica detrás de todo sistema de rociadores. Debe garantizar presión y flujo adecuados en el rociador más desfavorable (típicamente el más alto y alejado de la bomba).
+                </p>
+
+                <h3>Parámetros NFPA 13 para Residencial</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Valor Requerido</th>
+                            <th>Aplicación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Área de diseño</td>
+                            <td>1,500 ft² (139 m²)</td>
+                            <td>Residencial Hazard Light</td>
+                        </tr>
+                        <tr>
+                            <td>Densidad de descarga</td>
+                            <td>0.10 gpm/ft² (4.1 L/min/m²)</td>
+                            <td>Áreas habitables</td>
+                        </tr>
+                        <tr>
+                            <td>Presión mínima en rociador</td>
+                            <td>7 PSI (0.48 bar)</td>
+                            <td>Punto más desfavorable</td>
+                        </tr>
+                        <tr>
+                            <td>Duración de reserva</td>
+                            <td>60-120 minutos</td>
+                            <td>Según altura edificio</td>
+                        </tr>
+                        <tr>
+                            <td>Número de rociadores simultáneos</td>
+                            <td>4-12 heads</td>
+                            <td>Según configuración</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Componentes del Sistema de Bombeo</h3>
+                <p>
+                    Torres residenciales de 20+ pisos requieren sistemas de bombeo robusto, típicamente ubicado en sótano con cisternas dedicadas:
+                </p>
+                <ul>
+                    <li><strong>Bomba principal (jockey pump):</strong> Mantiene presión del sistema (70-80 PSI), operación continua</li>
+                    <li><strong>Bomba contra incendio principal:</strong> 100-500 GPM según demanda, motor diesel o eléctrico</li>
+                    <li><strong>Bomba de respaldo:</strong> Capacidad 100% redundante, arranque automático</li>
+                    <li><strong>Cisterna dedicada:</strong> 40,000-120,000 litros según cálculo de demanda y duración requerida</li>
+                    <li><strong>Planta de emergencia:</strong> Respaldo eléctrico para bombas, arranque en <10 segundos</li>
+                </ul>
+                <p>
+                    Empresas especializadas como <a href="../../empresas/equipos-contra-incendios/proyecto-red.html">Proyecto Red</a> realizan los cálculos hidráulicos certificados y diseño completo de red de tuberías con software como Autosprink o HydraCAD.
+                </p>
+
+                <h2 id="integracion-bms">Integración con Building Management Systems (BMS)</h2>
+                <p>
+                    Los edificios clase A+ en CDMX operan con sistemas BMS centralizados (Schneider, Johnson Controls, Siemens) que integran climatización, iluminación, accesos, CCTV y seguridad. El sistema contra incendios debe comunicarse bidireccionalmente:
+                </p>
+                <ul>
+                    <li><strong>Monitoreo en tiempo real:</strong> Estado de válvulas, presión de sistema, nivel de cisternas, alarmas</li>
+                    <li><strong>Notificaciones automáticas:</strong> Alertas push a administración, bomberos, Protección Civil</li>
+                    <li><strong>Acciones coordinadas:</strong> Activación de extractores de humo, presurización de escaleras, liberación de puertas, llamada de elevadores a planta baja</li>
+                    <li><strong>Registros para auditoría:</strong> Historial completo de eventos para cumplimiento de seguros</li>
+                </ul>
+                <p>
+                    Proveedores como <a href="../../empresas/equipos-contra-incendios/meseci.html">MESECI</a>, con 35+ años de experiencia, ofrecen soluciones de integración completa con protocolos BACnet, Modbus y sistemas propietarios de fabricantes premium.
+                </p>
+
+                <div class="info-box">
+                    <h3>Casos de Éxito en CDMX</h3>
+                    <p>
+                        <strong>Torre Virreyes (Polanco):</strong> Sistema pre-acción en penthouses con rociadores ocultos cromados custom. 24 pisos, 950 GPM, integración completa BMS Schneider.
+                        <br><br>
+                        <strong>Residencial Punta Santa Fe:</strong> Híbrido húmedo (departamentos) + pre-acción (wine cellars). Rociadores concealed en 100% de áreas habitables.
+                        <br><br>
+                        <strong>Bosques Residencial:</strong> Sistema seco en estacionamientos + húmedo en torre. Bombeo redundante diesel-eléctrico, 180,000L de reserva.
+                    </p>
+                </div>
+
+                <h2 id="mantenimiento">Mantenimiento Sin Afectar Residentes</h2>
+                <p>
+                    El mantenimiento de sistemas en edificios ocupados de lujo presenta desafíos logísticos únicos. Los residentes no toleran interrupciones de agua, ruidos en horarios inadecuados o personal no calificado.
+                </p>
+
+                <h3>Programa de Mantenimiento NFPA 25</h3>
+                <ul>
+                    <li><strong>Semanal:</strong> Inspección visual de paneles de alarma, presión de sistema (personal de mantenimiento interno)</li>
+                    <li><strong>Mensual:</strong> Inspección de válvulas, alarmas de flujo, manómetros. Prueba de bomba jockey</li>
+                    <li><strong>Trimestral:</strong> Prueba de bomba principal (no-flow test), inspección de gabinetes, extintores</li>
+                    <li><strong>Semestral:</strong> Inspección interna de válvulas de retención, prueba de sistemas de detección</li>
+                    <li><strong>Anual:</strong> Prueba hidrostática completa, flow test de bombas, certificación externa</li>
+                    <li><strong>Quinquenal:</strong> Inspección interna de tuberías, pruebas de obstrucción (solo en sistemas con historial de problemas)</li>
+                </ul>
+
+                <h3>Mejores Prácticas para No Interrumpir</h3>
+                <ul>
+                    <li>Mantenimientos programados horario 9am-5pm días hábiles, notificados con 2 semanas de anticipación</li>
+                    <li>Personal uniformado, identificado, background check para acceso a áreas privadas</li>
+                    <li>Utilizar válvulas de seccionalización para aislar zonas sin afectar todo el edificio</li>
+                    <li>Equipos silenciosos para pruebas de bombeo (especificar niveles <70 dB)</li>
+                    <li>Coordinación con administración para evitar eventos (fiestas, juntas de condóminos)</li>
+                </ul>
+                <p>
+                    Empresas especializadas en mantenimiento como <a href="../../empresas/equipos-contra-incendios/manext.html">MANEXT</a> (80+ años de experiencia) ofrecen contratos de servicio full que incluyen reporte digital, certificaciones y respuesta de emergencia 24/7.
+                </p>
+
+                <h2 id="roi-seguros">ROI y Reducción de Primas de Seguro</h2>
+                <p>
+                    Aunque la inversión en rociadores automáticos representa 1.5-2.5% del costo de construcción en edificio de lujo (vs. 0.5-1% en construcción estándar), el retorno de inversión es significativo:
+                </p>
+
+                <h3>Beneficios Económicos Cuantificables</h3>
+                <ul>
+                    <li><strong>Reducción de primas:</strong> 15-40% de descuento en seguro de RC (Responsabilidad Civil) y daños materiales</li>
+                    <li><strong>Valorización del inmueble:</strong> Departamentos en edificios certificados LEED/EDGE con protección completa tienen premium de 8-12% en precio de venta</li>
+                    <li><strong>Velocidad de comercialización:</strong> Certificación de sistemas acelera permisos de ocupación y proceso de venta</li>
+                    <li><strong>Atracción de inquilinos premium:</strong> Corporativos clase A+ solo consideran edificios con protección certificada</li>
+                </ul>
+
+                <h3>Costos de Referencia CDMX 2025</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Concepto</th>
+                            <th>Costo Estimado</th>
+                            <th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Sistema húmedo completo</td>
+                            <td>$180-250 MXN/m²</td>
+                            <td>Incluye tubería, rociadores estándar, válvulas</td>
+                        </tr>
+                        <tr>
+                            <td>Upgrade a rociadores ocultos</td>
+                            <td>+$80-120 MXN/m²</td>
+                            <td>Solo áreas visibles (living, bedrooms)</td>
+                        </tr>
+                        <tr>
+                            <td>Sistema pre-acción</td>
+                            <td>$420-580 MXN/m²</td>
+                            <td>Áreas críticas, incluye detección</td>
+                        </tr>
+                        <tr>
+                            <td>Sistema de bombeo (torre 20 pisos)</td>
+                            <td>$1.2-2.8M MXN</td>
+                            <td>Bombas, cisternas, planta emergencia</td>
+                        </tr>
+                        <tr>
+                            <td>Integración BMS</td>
+                            <td>$180-350K MXN</td>
+                            <td>Paneles, interfaces, programación</td>
+                        </tr>
+                        <tr>
+                            <td>Mantenimiento anual</td>
+                            <td>$45-85K MXN</td>
+                            <td>Contrato full por edificio 80-120 deptos</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h2 id="certificaciones">Certificaciones LEED y Sustentabilidad</h2>
+                <p>
+                    Los desarrollos premium en CDMX buscan certificaciones LEED Gold o Platinum. El sistema contra incendios contribuye a varios créditos:
+                </p>
+                <ul>
+                    <li><strong>LEED Safety First:</strong> Prerequisito - Sistemas completos de detección y supresión</li>
+                    <li><strong>Water Efficiency:</strong> Sistemas de pre-acción reducen riesgo de desperdicios por activaciones falsas</li>
+                    <li><strong>Innovation:</strong> Integración con BMS para optimización energética de bombas</li>
+                    <li><strong>Materials & Resources:</strong> Especificar rociadores con certificación EPD (Environmental Product Declaration)</li>
+                </ul>
+                <p>
+                    Consultores especializados como <a href="../../empresas/equipos-contra-incendios/bombero-mx.html">Bombero MX</a> ofrecen asesoría para cumplimiento normativo y apoyo en procesos de certificación LEED/EDGE.
+                </p>
+
+                <h2 id="proveedores">Proveedores Especializados para Proyectos Premium</h2>
+                <p>
+                    La correcta implementación de sistemas de rociadores en edificios de lujo requiere proveedores con experiencia demostrada en proyectos de alto nivel:
+                </p>
+                <ul>
+                    <li><a href="../../empresas/equipos-contra-incendios/lga-contra-incendios.html">LGA Contra Incendios</a> - Diseño e instalación integral de sistemas para desarrollos residenciales premium. Especialistas en integración arquitectónica y rociadores ocultos.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/proyecto-red.html">Proyecto Red</a> - Ingeniería y diseño de redes hidráulicas contra incendios. Cálculos certificados NFPA 13, modelado 3D BIM, coordinación con MEP.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/meseci.html">MESECI</a> - Soluciones integrales desde 1989. Sistemas de pre-acción, integración BMS, proyectos corporativos y residenciales clase A+.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/manext.html">MANEXT</a> - Mantenimiento profesional con 80+ años de experiencia. Contratos de servicio para edificios premium, respuesta 24/7, certificaciones anuales.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/gama-de-mexico.html">Gama de México</a> - Planes corporativos para grandes desarrollos. Suministro de equipos premium, capacitación, consultoría normativa.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/bombero-mx.html">Bombero MX</a> - Certificación y asesoría para cumplimiento LEED. Venta de equipos certificados, inspecciones de Protección Civil.</li>
+                </ul>
+
+                <h2>Conclusión</h2>
+                <p>
+                    Los sistemas de rociadores automáticos en edificios residenciales de lujo en CDMX representan la convergencia entre ingeniería de protección contra incendios de clase mundial, diseño arquitectónico de alto nivel y tecnología de automatización avanzada. Lejos de ser un simple cumplimiento normativo, constituyen un diferenciador competitivo crucial que incrementa el valor del inmueble, reduce costos de seguro y ofrece tranquilidad genuina a residentes que han invertido cifras millonarias en su patrimonio.
+                </p>
+                <p>
+                    La clave del éxito radica en involucrar desde fase conceptual a especialistas certificados que comprendan tanto los requerimientos técnicos (NFPA 13, NOM-002-STPS) como las expectativas estéticas y funcionales del mercado premium. La inversión incremental en rociadores ocultos, sistemas de pre-acción para áreas críticas e integración BMS se recupera ampliamente a través de comercialización más rápida, precios de venta superiores y reducción de primas de seguro.
+                </p>
+                <p>
+                    Para desarrolladores, arquitectos y administradores de edificios de lujo en Santa Fe, Polanco, Bosques de las Lomas e Interlomas, trabajar con proveedores especializados que demuestren experiencia en proyectos similares no es opcional - es fundamental para el éxito del proyecto y la satisfacción de largo plazo de propietarios e inquilinos.
+                </p>
+            </article>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <aside class="toc">
+                    <h2 class="toc-title">Contenido</h2>
+                    <ul class="toc-list">
+                        <li><a href="#normativa">Normativa CDMX y NFPA 13</a></li>
+                        <li><a href="#tipos-sistemas">Tipos de Sistemas</a></li>
+                        <li><a href="#diseno-estetico">Diseño Estético y Rociadores Ocultos</a></li>
+                        <li><a href="#diseno-hidraulico">Diseño Hidráulico y Cálculos</a></li>
+                        <li><a href="#integracion-bms">Integración con BMS</a></li>
+                        <li><a href="#mantenimiento">Mantenimiento Profesional</a></li>
+                        <li><a href="#roi-seguros">ROI y Reducción de Seguros</a></li>
+                        <li><a href="#certificaciones">Certificaciones LEED</a></li>
+                        <li><a href="#proveedores">Proveedores Especializados</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Related Articles -->
+                <aside class="related-articles">
+                    <h2 class="related-articles-title">Artículos Relacionados</h2>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Sistemas de supresión" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="sistemas-supresion-construccion.html">Sistemas de Supresión de Incendios para Obras de Construcción</a>
+                        </div>
+                    </div>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/extintor.webp" alt="Tipos de extintores" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="tipos-extintores-construccion.html">Guía Completa de Tipos de Extintores para Construcción</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="logo-footer">Toda la Construcción</a>
+                    <p>El directorio B2B más completo de empresas de construcción en México. Conectamos profesionales con proveedores certificados en todo el país.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/todalaconstruccion" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/todaconstruccion" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/todalaconstruccion" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/todalaconstruccion" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="/nosotros">Nosotros</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="../../blog.html">Blog</a></li>
+                        <li><a href="/faq">Preguntas Frecuentes</a></li>
+                        <li><a href="/planes">Planes y Precios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categorías Principales</h3>
+                    <ul>
+                        <li><a href="../../categorias.html">Ver Todas las Categorías</a></li>
+                        <li><a href="../../categorias/equipos-contra-incendios.html">Equipos Contra Incendios</a></li>
+                        <li><a href="/maquinaria-pesada">Maquinaria Pesada</a></li>
+                        <li><a href="/materiales-construccion">Materiales de Construcción</a></li>
+                        <li><a href="/herramientas">Herramientas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Ciudades</h3>
+                    <ul>
+                        <li><a href="/ciudad/cdmx">Ciudad de México</a></li>
+                        <li><a href="/ciudad/monterrey">Monterrey</a></li>
+                        <li><a href="/ciudad/guadalajara">Guadalajara</a></li>
+                        <li><a href="/ciudad/queretaro">Querétaro</a></li>
+                        <li><a href="/ciudad/puebla">Puebla</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Contacto</h3>
+                    <p><strong>Email:</strong> contacto@todalaconstruccion.com</p>
+                    <p><strong>Teléfono:</strong> +52 (55) 5555-5555</p>
+                    <p><strong>Horario:</strong> Lun-Vie 9:00-18:00</p>
+                    <p><strong>Ubicación:</strong> Ciudad de México, México</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <span>&copy; 2025 Toda la Construcción. Todos los derechos reservados.</span>
+                    <a href="/terminos">Términos de Uso</a>
+                    <a href="/privacidad">Política de Privacidad</a>
+                </div>
+                <div class="footer-bottom-right">
+                    Hecho en México 🇲🇽
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

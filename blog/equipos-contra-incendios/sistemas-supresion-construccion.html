@@ -1,0 +1,951 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Supresión de Incendios para Obras de Construcción | Toda la Construcción</title>
+    <meta name="description" content="Guía completa sobre sistemas de supresión de incendios en sitios de construcción. Tipos, normativas, instalación y mantenimiento profesional.">
+    <meta name="keywords" content="sistemas supresión incendios, construcción, seguridad obra, equipos contra incendios, extintores, rociadores">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 8px 0;
+            font-size: 12px;
+        }
+
+        .header-top-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-top-left a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .header-top-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-top-right a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1e40af;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #64748b;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #1e40af;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline {
+            background: #fff;
+            color: #1e40af;
+            border: 2px solid #1e40af;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #fff;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .breadcrumb a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+
+        /* Article Container */
+        .article-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .article-hero {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .article-title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .article-summary {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #6b7280;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Main Content Layout */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 12px;
+        }
+
+        .toc-list a {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.5;
+            display: block;
+            padding: 6px 0;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: #1e40af;
+            padding-left: 8px;
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 30px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-articles-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .related-article-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .related-article-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .related-article-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .related-article-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .related-article-info a {
+            color: #111827;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            transition: color 0.2s;
+        }
+
+        .related-article-info a:hover {
+            color: #1e40af;
+        }
+
+        /* Article Content */
+        .article-content {
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111827;
+            margin: 50px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e40af;
+            margin: 35px 0 20px;
+        }
+
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .article-content li {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 12px;
+        }
+
+        .article-content strong {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .article-content a {
+            color: #1e40af;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .article-content a:hover {
+            border-bottom-color: #1e40af;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 12px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            text-align: center;
+            font-size: 13px;
+            color: #6b7280;
+            margin-top: 25px;
+            font-style: italic;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #1e40af;
+            padding: 25px 30px;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h3 {
+            font-size: 18px;
+            color: #1e40af;
+            margin: 0 0 12px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #cbd5e1;
+            padding: 60px 20px 0;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.1);
+        }
+
+        .footer-brand .logo-footer {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .footer-bottom-left {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-bottom-left a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .article-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                min-height: 350px;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .toc {
+                position: static;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+
+            .hero-content {
+                padding: 30px;
+            }
+
+            .article-content {
+                padding: 30px 20px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+        <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div class="header-top-left">
+                    <a href="mailto:contacto@todalaconstruccion.com">
+                        ✉ contacto@todalaconstruccion.com
+                    </a>
+                    <a href="tel:+525555555555">
+                        ☎ +52 (55) 5555-5555
+                    </a>
+                </div>
+                <div class="header-top-right">
+                    <a href="/ayuda">Ayuda</a>
+                    <a href="../../blog.html">Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-container">
+            <a href="../../index.html" class="logo">
+                Toda la Construcción
+                <span>| México</span>
+            </a>
+            <nav class="nav">
+                <a href="../../index.html">Inicio</a>
+                <a href="../../categorias.html">Categorías</a>
+                <a href="/empresas">Empresas</a>
+                <a href="/planes">Planes</a>
+            </nav>
+            <div class="header-buttons">
+                <a href="/login" class="btn btn-outline">Iniciar Sesión</a>
+                <a href="/registro" class="btn btn-primary">Registrar Negocio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../../index.html">Inicio</a> / <a href="../../blog.html">Blog</a> / <a href="../../blog.html">Equipos Contra Incendios</a> / Sistemas de Supresión
+        </div>
+    </div>
+
+    <!-- Article -->
+    <div class="article-wrapper">
+        <!-- Hero Section -->
+        <section class="article-hero">
+            <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Sistemas de supresión de incendios en construcción" class="hero-image">
+            <div class="hero-content">
+                <a href="../../blog.html" class="article-category">Equipos Contra Incendios</a>
+                <h1 class="article-title">Sistemas de Supresión de Incendios para Obras de Construcción</h1>
+                <p class="article-summary">
+                    Los sitios de construcción presentan riesgos únicos de incendio debido a materiales inflamables, trabajos en caliente y sistemas eléctricos temporales. Esta guía completa explora los sistemas de supresión esenciales, normativas vigentes, tipos de equipos requeridos y mejores prácticas para proteger tu obra, trabajadores y equipos durante todas las fases del proyecto constructivo.
+                </p>
+                <div class="article-meta">
+                    <span class="meta-item">Lectura: 8 min</span>
+                    <span class="meta-item">Guía Profesional</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Layout -->
+        <div class="content-layout">
+            <!-- Main Content -->
+            <article class="article-content">
+                <h2 id="riesgos">Riesgos de Incendio en Sitios de Construcción</h2>
+                <p>
+                    Las obras de construcción enfrentan desafíos únicos en materia de protección contra incendios. A diferencia de edificios terminados, los sitios activos carecen de sistemas permanentes de supresión, tienen acumulación de materiales combustibles y presentan múltiples fuentes de ignición como soldadura, corte y equipos eléctricos temporales.
+                </p>
+
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/extintor.webp" alt="Extintores en obra">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/polvo-quimico-seco-pqs.webp" alt="Extintor PQS">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/dioxido-de-carbono-co2.webp" alt="Extintor CO2">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/agua-a-presion.webp" alt="Sistema de rociadores">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/espuma-afff.webp" alt="Extintor de espuma">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/señalizacion-y-equipamiento.webp" alt="Señalización de seguridad">
+                    </div>
+                </div>
+                <p class="gallery-caption">Diversos tipos de equipos contra incendios utilizados en obras de construcción</p>
+
+                <p>
+                    Los materiales comunes en construcción como madera, plásticos, aislantes, solventes y combustibles crean un ambiente de alto riesgo. Además, la naturaleza cambiante del sitio dificulta mantener rutas de evacuación despejadas y equipos de protección accesibles.
+                </p>
+
+                <h2 id="tipos-sistemas">Tipos de Sistemas de Supresión Requeridos</h2>
+
+                <h3 id="extintores">1. Extintores Portátiles</h3>
+                <p>
+                    Son la primera línea de defensa en cualquier obra. La normativa mexicana requiere extintores de diferentes clases según las actividades. Empresas especializadas como <a href="../../empresas/equipos-contra-incendios/lga-contra-incendios.html">LGA Contra Incendios</a> ofrecen asesoría profesional para seleccionar los equipos adecuados según el tipo de obra y materiales utilizados.
+                </p>
+                <ul>
+                    <li><strong>Clase A:</strong> Para materiales combustibles ordinarios como madera, papel y textiles</li>
+                    <li><strong>Clase B:</strong> Para líquidos inflamables como gasolina, aceites y solventes</li>
+                    <li><strong>Clase C:</strong> Para equipos eléctricos energizados</li>
+                    <li><strong>Clase D:</strong> Para metales combustibles en soldadura especial</li>
+                    <li><strong>Extintores ABC:</strong> De uso múltiple, ideales para la mayoría de áreas de construcción</li>
+                </ul>
+                <p>
+                    La distribución debe garantizar que ningún punto del sitio esté a más de 23 metros de un extintor. Para el <a href="../../empresas/equipos-contra-incendios/manext.html">mantenimiento y recarga de extintores</a>, es fundamental contar con proveedores certificados que garanticen el correcto funcionamiento de los equipos.
+                </p>
+
+                <h3 id="rociadores">2. Sistemas de Rociadores Temporales</h3>
+                <p>
+                    En edificios de gran altura en construcción, se deben instalar sistemas de rociadores temporales conforme avanzan los pisos. Estos sistemas utilizan tuberías temporales conectadas al suministro de agua del sitio y protegen:
+                </p>
+                <ul>
+                    <li>Áreas de almacenamiento de materiales</li>
+                    <li>Pisos terminados o semi-terminados</li>
+                    <li>Zonas con acabados inflamables instalados</li>
+                    <li>Áreas cerradas sin ventilación natural</li>
+                </ul>
+
+                <h3>3. Mangueras y Gabinetes Contra Incendios</h3>
+                <p>
+                    Para obras extensas, se requieren gabinetes equipados con mangueras de 38mm (1.5 pulgadas) y longitud suficiente para cubrir radios de 30 metros. El sistema de agua debe mantener presión mínima de 4.5 bar (65 PSI) en el punto más alejado.
+                </p>
+
+                <h3>4. Sistemas de Supresión para Áreas Específicas</h3>
+                <p>
+                    Algunas zonas requieren protección especializada. <a href="../../empresas/equipos-contra-incendios/meseci.html">MESECI</a>, con más de 35 años de experiencia, ofrece soluciones integrales para:
+                </p>
+                <ul>
+                    <li><strong>Cuartos de transformadores:</strong> Sistemas de CO2 o agentes limpios</li>
+                    <li><strong>Generadores diésel:</strong> Sistemas de espuma o polvo químico</li>
+                    <li><strong>Almacenes de pintura:</strong> Sistemas de espuma de alta expansión</li>
+                    <li><strong>Talleres de soldadura:</strong> Extintores de polvo químico ABC de alta capacidad</li>
+                </ul>
+
+                <div class="info-box">
+                    <h3 id="normativa">Normativa Aplicable</h3>
+                    <p>
+                        En México, las obras de construcción deben cumplir con la NOM-002-STPS (Condiciones de seguridad contra incendios) y regulaciones locales de Protección Civil. Se requieren inspecciones periódicas y recarga de extintores cada 12 meses o después de cualquier uso. Empresas como <a href="../../empresas/equipos-contra-incendios/bombero-mx.html">Bombero MX</a> ofrecen servicios de certificación y asesoría para cumplimiento normativo.
+                    </p>
+                </div>
+
+                <h2 id="planificacion">Planificación de Sistemas por Fase de Construcción</h2>
+
+                <h3>Fase de Cimentación y Estructura</h3>
+                <p>
+                    Durante los trabajos de cimentación y levantamiento de estructura, los riesgos principales provienen de soldadura, corte con oxígeno y equipos diésel. Se requiere:
+                </p>
+                <ul>
+                    <li>Extintores ABC de 9kg cada 15 metros en áreas de trabajo en caliente</li>
+                    <li>Contenedores metálicos para desechos combustibles</li>
+                    <li>Sistema de agua provisional con hidrantes temporales</li>
+                    <li>Mantas ignífugas en estaciones de soldadura</li>
+                </ul>
+
+                <h3>Fase de Acabados e Instalaciones</h3>
+                <p>
+                    Esta fase presenta mayor riesgo por la acumulación de materiales inflamables como aislamientos, paneles, pinturas y solventes. <a href="../../empresas/equipos-contra-incendios/gama-de-mexico.html">Gama de México</a> ofrece planes integrales de protección que incluyen:
+                </p>
+                <ul>
+                    <li>Incrementar densidad de extintores a 1 cada 10 metros</li>
+                    <li>Instalar rociadores temporales en áreas cerradas</li>
+                    <li>Establecer almacenes segregados para líquidos inflamables</li>
+                    <li>Implementar sistemas de detección de humo en áreas confinadas</li>
+                </ul>
+
+                <h2 id="mantenimiento">Mantenimiento y Capacitación</h2>
+                <p>
+                    Los sistemas de supresión requieren mantenimiento constante en ambiente de construcción:
+                </p>
+                <ul>
+                    <li>Inspección visual diaria de extintores por personal de seguridad</li>
+                    <li>Verificación semanal de presión en sistemas de agua</li>
+                    <li>Pruebas mensuales de alarmas y detectores</li>
+                    <li>Mantenimiento trimestral profesional de todos los equipos</li>
+                    <li>Capacitación trimestral del personal en uso de equipos</li>
+                </ul>
+
+                <h2>Integración con Sistemas Permanentes</h2>
+                <p>
+                    Conforme avanza la construcción, los sistemas temporales deben integrarse con las instalaciones permanentes:
+                </p>
+                <ul>
+                    <li>Transición de tuberías temporales a red permanente de rociadores</li>
+                    <li>Instalación progresiva de gabinetes y extintores en ubicaciones finales</li>
+                    <li>Conexión de detectores al sistema de alarma definitivo</li>
+                    <li>Certificación y pruebas de sistemas completos antes del término de obra</li>
+                </ul>
+
+                <div class="info-box">
+                    <h3>Inversión en Protección</h3>
+                    <p>
+                        El costo de sistemas de supresión representa típicamente 0.5-1.5% del presupuesto total de construcción, pero puede prevenir pérdidas que superan 50 veces esa inversión. Un incendio mayor en obra causa retrasos de 3-6 meses promedio, además de daños materiales y responsabilidades legales.
+                    </p>
+                </div>
+
+                <h2 id="proveedores">Proveedores Especializados en México</h2>
+                <p>
+                    Para garantizar la correcta implementación de sistemas contra incendios en obra, es fundamental trabajar con proveedores certificados y experimentados:
+                </p>
+                <ul>
+                    <li><a href="../../empresas/equipos-contra-incendios/lga-contra-incendios.html">LGA Contra Incendios</a> - Especialistas en equipos y sistemas integrales con presencia en Querétaro</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/manext.html">MANEXT</a> - Más de 80 años de experiencia en mantenimiento y recarga de extintores</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/meseci.html">MESECI</a> - Soluciones completas para protección contra incendios desde 1989</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/bombero-mx.html">Bombero MX</a> - Venta, mantenimiento y certificación de equipos en CDMX</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/gama-de-mexico.html">Gama de México</a> - Planes corporativos para grandes proyectos de construcción</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/proyecto-red.html">Proyecto Red</a> - Diseño e instalación de redes contra incendios</li>
+                </ul>
+
+                <h2>Conclusión</h2>
+                <p>
+                    Los sistemas de supresión de incendios en construcción no son un gasto opcional, sino una inversión crítica en seguridad, continuidad del proyecto y cumplimiento normativo. Un plan integral que evolucione con cada fase de construcción, mantenimiento riguroso y capacitación continua del personal son las claves para minimizar riesgos y proteger vidas, equipos e inversión.
+                </p>
+                <p>
+                    Consulta con especialistas certificados para diseñar un sistema adaptado a las características específicas de tu proyecto y asegura que tu obra cumpla con todas las normativas aplicables desde el primer día.
+                </p>
+            </article>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <aside class="toc">
+                    <h2 class="toc-title">Contenido</h2>
+                    <ul class="toc-list">
+                        <li><a href="#riesgos">Riesgos de Incendio</a></li>
+                        <li><a href="#tipos-sistemas">Tipos de Sistemas</a></li>
+                        <li><a href="#extintores">Extintores Portátiles</a></li>
+                        <li><a href="#rociadores">Rociadores Temporales</a></li>
+                        <li><a href="#normativa">Normativa Aplicable</a></li>
+                        <li><a href="#planificacion">Planificación por Fase</a></li>
+                        <li><a href="#mantenimiento">Mantenimiento</a></li>
+                        <li><a href="#proveedores">Proveedores Especializados</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Related Articles -->
+                <aside class="related-articles">
+                    <h2 class="related-articles-title">Artículos Relacionados</h2>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/agua-a-presion.webp" alt="Rociadores edificios lujo" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="rociadores-automaticos-edificios-lujo.html">Rociadores Automáticos en Edificios de Lujo</a>
+                        </div>
+                    </div>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Estacionamientos subterráneos" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="proteccion-incendios-estacionamientos-subterraneos.html">Protección en Estacionamientos Subterráneos</a>
+                        </div>
+                    </div>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/extintor.webp" alt="Tipos de extintores" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="tipos-extintores-construccion.html">Guía de Tipos de Extintores para Construcción</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+        <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="logo-footer">Toda la Construcción</a>
+                    <p>El directorio B2B más completo de empresas de construcción en México. Conectamos profesionales con proveedores certificados en todo el país.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/todalaconstruccion" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/todaconstruccion" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/todalaconstruccion" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/todalaconstruccion" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="/nosotros">Nosotros</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="../../blog.html">Blog</a></li>
+                        <li><a href="/faq">Preguntas Frecuentes</a></li>
+                        <li><a href="/planes">Planes y Precios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categorías Principales</h3>
+                    <ul>
+                        <li><a href="../../categorias.html">Ver Todas las Categorías</a></li>
+                        <li><a href="../../categorias/equipos-contra-incendios.html">Equipos Contra Incendios</a></li>
+                        <li><a href="/maquinaria-pesada">Maquinaria Pesada</a></li>
+                        <li><a href="/materiales-construccion">Materiales de Construcción</a></li>
+                        <li><a href="/herramientas">Herramientas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Ciudades</h3>
+                    <ul>
+                        <li><a href="/ciudad/cdmx">Ciudad de México</a></li>
+                        <li><a href="/ciudad/monterrey">Monterrey</a></li>
+                        <li><a href="/ciudad/guadalajara">Guadalajara</a></li>
+                        <li><a href="/ciudad/queretaro">Querétaro</a></li>
+                        <li><a href="/ciudad/puebla">Puebla</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Contacto</h3>
+                    <p><strong>Email:</strong> contacto@todalaconstruccion.com</p>
+                    <p><strong>Teléfono:</strong> +52 (55) 5555-5555</p>
+                    <p><strong>Horario:</strong> Lun-Vie 9:00-18:00</p>
+                    <p><strong>Ubicación:</strong> Ciudad de México, México</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <span>&copy; 2025 Toda la Construcción. Todos los derechos reservados.</span>
+                    <a href="/terminos">Términos de Uso</a>
+                    <a href="/privacidad">Política de Privacidad</a>
+                </div>
+                <div class="footer-bottom-right">
+                    Hecho en México 🇲🇽
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

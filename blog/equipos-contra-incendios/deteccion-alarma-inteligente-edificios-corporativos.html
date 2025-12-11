@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistemas de Detección y Alarma Inteligentes para Edificios Corporativos CDMX | Toda la Construcción</title>
+    <meta name="description" content="Guía técnica sobre sistemas de detección analógica, alarmas direccionables, integración BMS y certificaciones LEED/WELL para edificios corporativos clase A+ en México.">
+    <meta name="keywords" content="sistemas detección incendios inteligentes, alarmas contra incendio edificios corporativos, detección humo analógica CDMX, BMS integrado protección incendios">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 8px 0;
+            font-size: 12px;
+        }
+
+        .header-top-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-top-left a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .header-top-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-top-right a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1e40af;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #64748b;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #1e40af;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline {
+            background: #fff;
+            color: #1e40af;
+            border: 2px solid #1e40af;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #fff;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .breadcrumb a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+
+        /* Article Container */
+        .article-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .article-hero {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .article-title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .article-summary {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #6b7280;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Main Content Layout */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 12px;
+        }
+
+        .toc-list a {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.5;
+            display: block;
+            padding: 6px 0;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: #1e40af;
+            padding-left: 8px;
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 30px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-articles-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .related-article-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .related-article-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .related-article-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .related-article-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .related-article-info a {
+            color: #111827;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            transition: color 0.2s;
+        }
+
+        .related-article-info a:hover {
+            color: #1e40af;
+        }
+
+        /* Article Content */
+        .article-content {
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111827;
+            margin: 50px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e40af;
+            margin: 35px 0 20px;
+        }
+
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .article-content li {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 12px;
+        }
+
+        .article-content strong {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .article-content a {
+            color: #1e40af;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .article-content a:hover {
+            border-bottom-color: #1e40af;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 12px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            text-align: center;
+            font-size: 13px;
+            color: #6b7280;
+            margin-top: 25px;
+            font-style: italic;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #1e40af;
+            padding: 25px 30px;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h3 {
+            font-size: 18px;
+            color: #1e40af;
+            margin: 0 0 12px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table thead {
+            background: #1e40af;
+            color: white;
+        }
+
+        .comparison-table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #cbd5e1;
+            padding: 60px 20px 0;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.1);
+        }
+
+        .footer-brand .logo-footer {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-link:hover {
+            background: #1e40af;
+            border-color: #1e40af;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .footer-bottom-left {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-bottom-left a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .article-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                min-height: 350px;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+
+            .hero-content {
+                padding: 30px;
+            }
+
+            .article-content {
+                padding: 30px 20px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div class="header-top-left">
+                    <a href="mailto:contacto@todalaconstruccion.com">
+                        ✉ contacto@todalaconstruccion.com
+                    </a>
+                    <a href="tel:+525555555555">
+                        ☎ +52 (55) 5555-5555
+                    </a>
+                </div>
+                <div class="header-top-right">
+                    <a href="/ayuda">Ayuda</a>
+                    <a href="../../blog.html">Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-container">
+            <a href="../../index.html" class="logo">
+                Toda la Construcción
+                <span>| México</span>
+            </a>
+            <nav class="nav">
+                <a href="../../index.html">Inicio</a>
+                <a href="../../categorias.html">Categorías</a>
+                <a href="/empresas">Empresas</a>
+                <a href="/planes">Planes</a>
+            </nav>
+            <div class="header-buttons">
+                <a href="/login" class="btn btn-outline">Iniciar Sesión</a>
+                <a href="/registro" class="btn btn-primary">Registrar Negocio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../../index.html">Inicio</a> / <a href="../../blog.html">Blog</a> / <a href="../../blog.html">Equipos Contra Incendios</a> / Detección y Alarma Inteligente
+        </div>
+    </div>
+
+    <!-- Article -->
+    <div class="article-wrapper">
+        <!-- Hero Section -->
+        <section class="article-hero">
+            <img src="../../img/equipos-contra-incendios/señalizacion-y-equipamiento.webp" alt="Sistemas de detección inteligente" class="hero-image">
+            <div class="hero-content">
+                <a href="../../blog.html" class="article-category">Equipos Contra Incendios</a>
+                <h1 class="article-title">Sistemas de Detección y Alarma Inteligentes para Edificios Corporativos</h1>
+                <p class="article-summary">
+                    Los edificios corporativos clase A+ en CDMX requieren sistemas de detección y alarma de última generación que van más allá del cumplimiento normativo básico. Detectores analógicos direccionables, integración completa con BMS, notificaciones móviles y análisis predictivo definen el estándar actual. Esta guía técnica cubre tecnologías inteligentes, protocolos de comunicación, certificaciones LEED/WELL y casos de implementación en Torre BBVA, Punta Santa Fe y complejo Manacar.
+                </p>
+                <div class="article-meta">
+                    <span class="meta-item">Lectura: 11 min</span>
+                    <span class="meta-item">Guía Técnica Avanzada</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Layout -->
+        <div class="content-layout">
+            <!-- Main Content -->
+            <article class="article-content">
+                <h2 id="evolucion">Evolución: De Sistemas Convencionales a Inteligentes</h2>
+                <p>
+                    La diferencia entre un sistema convencional y uno inteligente no es meramente tecnológica - es fundamentalmente estratégica. Mientras los sistemas tradicionales solo indican "hay fuego en zona 3", los sistemas inteligentes reportan "detector #327 en piso 12, oficina 1204-B detecta humo nivel 42%, temperatura 28°C, incremento 3°C en 90 segundos - probable falsa alarma por cocina, pero requiere verificación".
+                </p>
+
+                <h3>Limitaciones de Sistemas Convencionales</h3>
+                <ul>
+                    <li><strong>Zonificación ambigua:</strong> Una "zona" puede abarcar piso completo (1,500+ m²), sin ubicación precisa</li>
+                    <li><strong>Información binaria:</strong> Solo "alarma" o "normal", sin niveles intermedios</li>
+                    <li><strong>Falsas alarmas frecuentes:</strong> 70-85% de alarmas son falsas en sistemas convencionales</li>
+                    <li><strong>Sin diagnóstico:</strong> No detecta fallas de detectores hasta inspección manual</li>
+                    <li><strong>Expansión limitada:</strong> Típicamente max 10-15 zonas por panel</li>
+                    <li><strong>Sin integración:</strong> Opera aislado de otros sistemas del edificio</li>
+                </ul>
+
+                <h3>Ventajas de Sistemas Inteligentes Direccionables</h3>
+                <ul>
+                    <li><strong>Identificación exacta:</strong> Cada detector tiene dirección única (ID), ubicación precisa en planos</li>
+                    <li><strong>Detección analógica:</strong> Mide niveles de humo 0-100%, permite umbrales configurables</li>
+                    <li><strong>Verificación cruzada:</strong> Algoritmos analizan múltiples sensores para confirmar o descartar alarmas</li>
+                    <li><strong>Auto-diagnóstico:</strong> Detectores reportan estado de cámara óptica, batería, temperatura ambiente</li>
+                    <li><strong>Escalabilidad masiva:</strong> Hasta 240+ dispositivos por loop, redes de miles de puntos</li>
+                    <li><strong>Integración total:</strong> Comunicación bidireccional con BMS, CCTV, control de accesos, HVAC</li>
+                </ul>
+
+                <div class="info-box">
+                    <h3>ROI de Sistemas Inteligentes</h3>
+                    <p>
+                        Aunque la inversión inicial es 40-60% superior vs. convencional, el retorno se materializa en: <strong>Reducción 80-90% de falsas alarmas</strong> (ahorro en evacuaciones innecesarias, productividad), <strong>Mantenimiento predictivo</strong> (reemplazo programado vs. emergencias), <strong>Reducción 15-25% en primas de seguro</strong> (aseguradoras valoran tecnología certificada), <strong>Cumplimiento LEED</strong> (créditos Safety First + Innovation). Payback típico: 3-5 años en edificios clase A+.
+                    </p>
+                </div>
+
+                <h2 id="tecnologias">Tecnologías de Detección Avanzada</h2>
+
+                <h3>Detectores Analógicos Multi-Criterio</h3>
+                <p>
+                    La tecnología más avanzada combina múltiples sensores en un solo dispositivo para máxima precisión:
+                </p>
+                <ul>
+                    <li><strong>Sensor óptico (humo visible):</strong> Cámara láser detecta partículas 0.3-10 micrones</li>
+                    <li><strong>Sensor térmico (temperatura):</strong> Termistor de alta precisión ±0.5°C</li>
+                    <li><strong>Sensor CO (monóxido de carbono):</strong> Celda electroquímica 0-300 ppm</li>
+                    <li><strong>Algoritmo de fusión:</strong> IA procesa las 3 señales identificando patrones de fuego real vs. falsos positivos</li>
+                </ul>
+                <p>
+                    <strong>Aplicación ideal:</strong> Oficinas abiertas, salas de juntas, áreas de alta ocupación. Marcas líderes: Siemens Sinteso, Honeywell Notifier, Johnson Controls Vigilant, Edwards EST3.
+                </p>
+
+                <h3>Detectores de Aspiración VESDA/HSSD</h3>
+                <p>
+                    Very Early Smoke Detection Apparatus - tecnología de detección ultra-temprana mediante muestreo activo de aire:
+                </p>
+                <ul>
+                    <li><strong>Funcionamiento:</strong> Red de tubería con orificios aspira aire continuamente, analizándolo con láser de alta sensibilidad</li>
+                    <li><strong>Sensibilidad extrema:</strong> Detecta humo invisible (0.0005-20% oscurecimiento por metro)</li>
+                    <li><strong>4 niveles de alarma configurables:</strong> Alert → Action → Fire 1 → Fire 2</li>
+                    <li><strong>Ventaja crítica:</strong> Detección 30-60 minutos antes que detector convencional</li>
+                    <li><strong>Aplicación:</strong> Data centers, salas de telecomunicaciones, archivos críticos, salas de servidores</li>
+                </ul>
+                <p>
+                    <strong>Costo:</strong> $45K-85K MXN por unidad (cubre 200-2,000 m² según configuración). ROI justificado en áreas donde 10 min adicionales de respuesta evitan millones en pérdidas de data/equipos.
+                </p>
+
+                <h3>Detectores de Llama (Flame Detectors)</h3>
+                <p>
+                    Tecnología óptica que detecta radiación ultravioleta (UV) e infrarroja (IR) característica de llamas:
+                </p>
+                <ul>
+                    <li><strong>UV/IR3:</strong> Triple espectro infrarrojo + UV, inmunidad a falsas alarmas por luz solar o soldadura</li>
+                    <li><strong>Tiempo de respuesta:</strong> <5 segundos desde ignición</li>
+                    <li><strong>Rango:</strong> Cobertura cónica 90° hasta 60m de distancia</li>
+                    <li><strong>Aplicación:</strong> Cuartos de máquinas, plantas de energía de edificios, almacenes de químicos</li>
+                </ul>
+
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/señalizacion-y-equipamiento.webp" alt="Panel de control inteligente">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Detectores analógicos">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/extintor.webp" alt="Estación manual de alarma">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/agua-a-presion.webp" alt="Integración con supresión">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/polvo-quimico-seco-pqs.webp" alt="Notificadores visuales">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/mantenimiento-preventivo.webp" alt="Mantenimiento predictivo">
+                    </div>
+                </div>
+                <p class="gallery-caption">Componentes de sistemas de detección y alarma inteligentes para edificios corporativos</p>
+
+                <h2 id="arquitectura">Arquitectura de Sistemas Direccionables</h2>
+
+                <h3>Topología de Redes en Loop</h3>
+                <p>
+                    Los sistemas direccionables modernos utilizan cableado en loop (anillo cerrado) que proporciona redundancia crítica:
+                </p>
+                <ul>
+                    <li><strong>Loop simple:</strong> Panel → Dispositivos → Panel (si hay corte en un punto, todos los dispositivos posteriores se pierden)</li>
+                    <li><strong>Loop de alta confiabilidad (Class A):</strong> Cableado doble redundante (ida y vuelta separadas) - si hay corte, señal llega por ruta alterna</li>
+                    <li><strong>Capacidad típica:</strong> 127-240 dispositivos por loop (detectores + módulos + notificadores)</li>
+                    <li><strong>Distancia máxima:</strong> 3,000m de cableado total por loop con cable 18 AWG</li>
+                </ul>
+
+                <h3>Paneles de Control en Red</h3>
+                <p>
+                    Edificios corporativos grandes requieren múltiples paneles coordinados:
+                </p>
+                <ul>
+                    <li><strong>Panel maestro (Master):</strong> Coordina lógica global, reporta a BMS y estación de monitoreo central</li>
+                    <li><strong>Paneles satélite (Slave):</strong> Controlan zonas específicas (piso, ala, edificio en campus), reportan a maestro</li>
+                    <li><strong>Red de paneles:</strong> Protocolo propietario o estándar (BACnet MS/TP, Modbus RTU) sobre RS-485 o Ethernet</li>
+                    <li><strong>Capacidad de red:</strong> Hasta 1,024 paneles, 245,000+ puntos monitoreados</li>
+                </ul>
+
+                <h3>Lógica de Causa-Efecto Programable</h3>
+                <p>
+                    La inteligencia del sistema reside en matrices de causa-efecto configurables:
+                </p>
+                <ul>
+                    <li><strong>Ejemplo simple:</strong> "Si detector #345 (piso 8) alarma → activar notificadores auditivos piso 7, 8, 9 + cerrar compuertas de humo piso 8"</li>
+                    <li><strong>Lógica avanzada:</strong> "Si ≥2 detectores en zona crítica alarman en <120 seg → descargar sistema de supresión + apagar HVAC + notificar bomberos"</li>
+                    <li><strong>Integración horaria:</strong> Diferentes respuestas según ocupación (horario laboral vs. noche/fin de semana)</li>
+                    <li><strong>Pre-alarmas:</strong> Notificar personal de seguridad internamente antes de evacuación masiva</li>
+                </ul>
+
+                <h2 id="integracion-bms">Integración con Building Management Systems (BMS)</h2>
+                <p>
+                    La verdadera potencia de sistemas inteligentes se libera cuando están completamente integrados al ecosistema de automatización del edificio.
+                </p>
+
+                <h3>Protocolos de Comunicación</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Protocolo</th>
+                            <th>Características</th>
+                            <th>Uso Típico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>BACnet IP</strong></td>
+                            <td>Estándar abierto, sobre Ethernet/IP<br>Alta velocidad, nativo en BMS modernos</td>
+                            <td>Integración panel maestro → BMS principal (Schneider, Siemens, Johnson Controls)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BACnet MS/TP</strong></td>
+                            <td>BACnet sobre RS-485, económico<br>Velocidad 76.8 kbps, distancias largas</td>
+                            <td>Paneles satélite → Panel maestro<br>Edificios con infraestructura RS-485 existente</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modbus TCP/IP</strong></td>
+                            <td>Protocolo industrial robusto, simple<br>Amplia compatibilidad</td>
+                            <td>Integración con PLCs industriales<br>Edificios con BMS basado en Modbus</td>
+                        </tr>
+                        <tr>
+                            <td><strong>OPC UA</strong></td>
+                            <td>Protocolo moderno orientado a servicios<br>Seguridad integrada, web-based</td>
+                            <td>Edificios inteligentes de nueva generación<br>Integración con sistemas de analytics cloud</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Protocolos propietarios</strong></td>
+                            <td>Específicos de fabricante (ej. Edwards LNet)<br>Optimizados pero sin interoperabilidad</td>
+                            <td>Comunicación interna entre dispositivos de misma marca</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Acciones Coordinadas Automáticas</h3>
+                <p>
+                    Al detectar incendio, el BMS integrado ejecuta secuencias complejas automáticamente:
+                </p>
+                <ul>
+                    <li><strong>HVAC (Climatización):</strong> Apagar en zona afectada, presurizar escaleras, activar extractores humo</li>
+                    <li><strong>Elevadores:</strong> Llamar a planta baja, deshabilitar llamado desde pisos afectados, reservar para bomberos</li>
+                    <li><strong>Control de accesos:</strong> Liberar chapas electromagnéticas en rutas de evacuación, bloquear acceso a zonas peligrosas</li>
+                    <li><strong>Iluminación:</strong> Encender luces al 100% en rutas de evacuación, activar iluminación de emergencia</li>
+                    <li><strong>Comunicaciones:</strong> Enviar notificaciones push a app móvil de gerencia, email a brigadistas, SMS a bomberos</li>
+                    <li><strong>CCTV:</strong> Enfocar cámaras en zona de alarma, grabar en alta resolución, mostrar en estación central</li>
+                    <li><strong>Barreras/Plumas:</strong> Abrir salidas vehiculares, bloquear entradas para facilitar acceso de bomberos</li>
+                </ul>
+
+                <p>
+                    Empresas especializadas como <a href="../../empresas/equipos-contra-incendios/meseci.html">MESECI</a> tienen experiencia en integración completa de sistemas contra incendio con plataformas BMS de Schneider EcoStruxure, Siemens Desigo, Johnson Controls Metasys y Honeywell Enterprise Buildings Integrator.
+                </p>
+
+                <h2 id="notificacion">Sistemas de Notificación y Evacuación por Voz</h2>
+
+                <h3>Evolución: De Sirenas a Mensajes Inteligibles</h3>
+                <p>
+                    Los estudios de comportamiento humano en emergencias demuestran que sirenas tradicionales generan confusión y retraso en evacuación (10-15% de ocupantes no evacúan al escuchar sirena ambigua). Los sistemas modernos de evacuación por voz (Voice Evacuation - VE) mejoran tiempos de respuesta en 40-60%.
+                </p>
+
+                <h3>Componentes de Sistema de Voz</h3>
+                <ul>
+                    <li><strong>Amplificadores distribuidos:</strong> 50-250W por zona, redundancia N+1</li>
+                    <li><strong>Altavoces certificados:</strong> EN 54-24 (normativa europea adoptada), inteligibilidad mínima STI 0.5</li>
+                    <li><strong>Micrófonos de bomberos:</strong> Estaciones en lobby y planta baja para mensajes en vivo</li>
+                    <li><strong>Grabaciones pre-programadas:</strong> Mensajes en español/inglés según demographics del edificio</li>
+                    <li><strong>Zonificación flexible:</strong> Evacuar pisos selectivamente (piso afectado + 2 superiores + 1 inferior = estrategia común)</li>
+                </ul>
+
+                <h3>Mensajes Tipo y Secuencias</h3>
+                <p>
+                    <strong>Secuencia de evacuación típica:</strong>
+                </p>
+                <ul>
+                    <li><strong>T+0 seg (Pre-alarma):</strong> Mensaje solo a personal de seguridad "Alerta en piso 12, verificar detector 327"</li>
+                    <li><strong>T+60 seg (Confirmación):</strong> Si persiste, tono de alerta + mensaje "Atención: se ha detectado emergencia en piso 12. Personal de piso 11, 12 y 13 diríjanse a escaleras de emergencia"</li>
+                    <li><strong>T+120 seg (Evacuación general):</strong> "Emergencia confirmada. Todos los ocupantes evacúen el edificio por escaleras de emergencia. NO utilicen elevadores"</li>
+                    <li><strong>T+continuo:</strong> Repetición cada 30 segundos con instrucciones específicas</li>
+                </ul>
+
+                <h2 id="monitoreo">Monitoreo Remoto y Notificaciones Móviles</h2>
+                <p>
+                    La capacidad de monitorear el sistema contra incendio desde cualquier ubicación transforma la gestión de seguridad:
+                </p>
+
+                <h3>Plataformas Cloud de Monitoreo</h3>
+                <ul>
+                    <li><strong>Dashboard web:</strong> Vista de todos los dispositivos en tiempo real, estado, alarmas activas, históricos</li>
+                    <li><strong>Planos interactivos:</strong> Visualización gráfica de ubicación de detectores, zonas, rutas de evacuación</li>
+                    <li><strong>Analítica predictiva:</strong> ML identifica patrones de falsas alarmas recurrentes, predice fallas de detectores</li>
+                    <li><strong>Reportes automatizados:</strong> Generación de reportes mensuales para Protección Civil, aseguradoras</li>
+                    <li><strong>Multi-sitio:</strong> Gerentes corporativos monitorean 10-20 edificios desde un solo dashboard</li>
+                </ul>
+
+                <h3>Notificaciones Push Móviles</h3>
+                <p>
+                    Apps nativas iOS/Android que transforman smartphones en terminales de monitoreo:
+                </p>
+                <ul>
+                    <li><strong>Alertas instantáneas:</strong> Push notification con ubicación exacta de alarma, nivel de severidad</li>
+                    <li><strong>Acciones remotas:</strong> Silenciar alarmas (con autenticación), resetear panel, ver cámaras CCTV de zona</li>
+                    <li><strong>Geofencing:</strong> Notificar diferentes personas según ubicación (gerente en edificio vs. en casa vs. de viaje)</li>
+                    <li><strong>Escalación automática:</strong> Si gerente de seguridad no reconoce alarma en 2 min, notificar a gerente general</li>
+                    <li><strong>Registro de auditoría:</strong> Timestamp de quién recibió notificación, quién respondió, acciones tomadas</li>
+                </ul>
+
+                <div class="info-box">
+                    <h3>Ciberseguridad en Sistemas Conectados</h3>
+                    <p>
+                        La conectividad IP introduce vulnerabilidades de ciberseguridad que deben mitigarse: <strong>Segmentación de redes</strong> (sistemas de vida-seguridad en VLAN dedicada separada de red corporativa), <strong>Firewalls industriales</strong> (whitelisting de IPs autorizadas), <strong>Autenticación multi-factor</strong> para acceso remoto, <strong>Encriptación TLS 1.3</strong> para comunicaciones, <strong>Actualizaciones de firmware</strong> programadas con procedimientos de rollback, <strong>Monitoreo de intrusiones</strong> (IDS/IPS específico para protocolos OT/BMS). Proveedores como <a href="../../empresas/equipos-contra-incendios/lga-contra-incendios.html">LGA Contra Incendios</a> implementan arquitecturas de red seguras según NIST Cybersecurity Framework.
+                    </p>
+                </div>
+
+                <h2 id="certificaciones">Certificaciones LEED y WELL para Edificios Inteligentes</h2>
+
+                <h3>Contribución a LEED v4.1</h3>
+                <p>
+                    Los sistemas de detección inteligentes aportan a múltiples créditos LEED:
+                </p>
+                <ul>
+                    <li><strong>Prerequisito Safety First:</strong> Sistema de detección y alarma cumpliendo NFPA 72 (obligatorio para certificación)</li>
+                    <li><strong>Innovation Credit:</strong> Sistemas de detección ultra-temprana (VESDA) + integración BMS avanzada (1-2 puntos)</li>
+                    <li><strong>Energy & Atmosphere:</strong> Optimización energética mediante shut-down coordinado de HVAC en emergencias</li>
+                    <li><strong>Materials & Resources:</strong> Especificar detectores con certificación EPD (Environmental Product Declaration)</li>
+                    <li><strong>Indoor Environmental Quality:</strong> Monitoreo de CO integrado a detección de incendio</li>
+                </ul>
+
+                <h3>WELL Building Standard v2</h3>
+                <p>
+                    Certificación enfocada en salud y bienestar de ocupantes valora:
+                </p>
+                <ul>
+                    <li><strong>Feature A02 - Emergency Preparedness:</strong> Sistemas de evacuación por voz con mensajes inteligibles</li>
+                    <li><strong>Feature A05 - Post-Emergency Air Purge:</strong> Coordinación detección → purga de aire contaminado post-evento</li>
+                    <li><strong>Feature T09 - Air Monitoring:</strong> Sensores de CO integrados a detección de incendio</li>
+                </ul>
+
+                <h2 id="casos-exito">Casos de Implementación en CDMX</h2>
+
+                <h3>Torre BBVA - Paseo de la Reforma</h3>
+                <p>
+                    <strong>Proyecto:</strong> Edificio corporativo insignia, 50 pisos, 80,000 m²<br>
+                    <strong>Sistema implementado:</strong>
+                </p>
+                <ul>
+                    <li>Red de 4 paneles Honeywell Notifier NFS2-640 en topología Class A (redundante)</li>
+                    <li>1,847 detectores analógicos multi-sensor (humo + temp + CO)</li>
+                    <li>Sistema VESDA en data centers (4 unidades VLP-006, cobertura 8,000 m²)</li>
+                    <li>Evacuación por voz con 340 altavoces, inteligibilidad STI 0.72 (excelente)</li>
+                    <li>Integración total con BMS Schneider EcoStruxure vía BACnet IP</li>
+                    <li>App móvil custom para gerencia con geofencing y escalación automática</li>
+                </ul>
+                <p>
+                    <strong>Resultados:</strong> Certificación LEED Platinum, 0 falsas alarmas en 3 años (vs. 12-18 en sistema anterior), reducción 28% en prima de seguro, reconocimiento USGBC como caso de estudio.
+                </p>
+
+                <h3>Complejo Corporativo Manacar - Santa Fe</h3>
+                <p>
+                    <strong>Proyecto:</strong> 3 torres corporativas, 28-32 pisos c/u, 140,000 m² total<br>
+                    <strong>Desafíos:</strong> Coordinación inter-torres, densidad de ocupación elevada (5,000+ personas), mix de inquilinos corporativos<br>
+                    <strong>Solución:</strong>
+                </p>
+                <ul>
+                    <li>Panel maestro en centro de control único (Edwards EST4) + 9 paneles satélite distribuidos</li>
+                    <li>2,680 detectores inteligentes en red de fibra óptica (inmunidad a interferencias EMI)</li>
+                    <li>Detección por aspiración en 18 salas de telecomunicaciones críticas</li>
+                    <li>Sistema de evacuación por voz bi-direccional (bomberos pueden comunicarse con ocupantes)</li>
+                    <li>Integración Johnson Controls Metasys con lógica de presurización de escaleras</li>
+                </ul>
+                <p>
+                    <strong>Proveedor principal:</strong> <a href="../../empresas/equipos-contra-incendios/gama-de-mexico.html">Gama de México</a> (instalación) + <a href="../../empresas/equipos-contra-incendios/manext.html">MANEXT</a> (mantenimiento)<br>
+                    <strong>Inversión:</strong> $38M MXN en sistemas de detección y alarma<br>
+                    <strong>Tiempo de implementación:</strong> 14 meses (fase de construcción)
+                </p>
+
+                <h3>Punta Santa Fe - Oficinas Premium</h3>
+                <p>
+                    <strong>Proyecto:</strong> Edificio clase A+, 22 pisos, 45,000 m²<br>
+                    <strong>Innovación:</strong> Primer edificio en México con sistema completamente cloud-native<br>
+                    <strong>Características:</strong>
+                </p>
+                <ul>
+                    <li>Paneles Siemens Cerberus PRO con conectividad nativa a Siemens MindSphere (IoT cloud)</li>
+                    <li>Analítica predictiva de ML identifica patrones de falsas alarmas, ajusta sensibilidad automáticamente</li>
+                    <li>Dashboard accesible desde cualquier dispositivo (desktop, tablet, smartphone) sin VPN</li>
+                    <li>API abierta permite integración con sistemas de inquilinos (accesos, ERP)</li>
+                    <li>Mantenimiento predictivo: sistema genera work orders automáticas 30 días antes de fallas proyectadas</li>
+                </ul>
+
+                <h2 id="mantenimiento-predictivo">Mantenimiento Predictivo vs. Preventivo</h2>
+
+                <h3>Enfoque Tradicional Preventivo</h3>
+                <p>
+                    Mantenimiento basado en calendario (trimestral, semestral, anual) sin considerar condición real de dispositivos. Resulta en:
+                </p>
+                <ul>
+                    <li>Sobre-mantenimiento de dispositivos en buen estado (desperdicio de recursos)</li>
+                    <li>Sub-mantenimiento de dispositivos en ambientes agresivos (fallas prematuras)</li>
+                    <li>Reemplazos masivos cada 10 años según "vida útil" genérica</li>
+                </ul>
+
+                <h3>Mantenimiento Predictivo con Sistemas Inteligentes</h3>
+                <p>
+                    Los detectores direccionables reportan condición en tiempo real, permitiendo:
+                </p>
+                <ul>
+                    <li><strong>Monitoreo de drift (deriva):</strong> Algoritmos detectan cuando cámara óptica de detector se ensucia progresivamente</li>
+                    <li><strong>Alertas tempranas:</strong> Sistema notifica "detector #847 requiere limpieza en próximos 30 días" (antes de falla crítica)</li>
+                    <li><strong>Optimización de rutas:</strong> Técnicos visitan solo detectores que realmente necesitan servicio</li>
+                    <li><strong>Históricos de dispositivos:</strong> Registro de cada limpieza, ajuste, reemplazo por dispositivo individual</li>
+                    <li><strong>Análisis de vida útil real:</strong> Reemplazar detectores según condición (algunos duran 15+ años, otros fallan a los 8)</li>
+                </ul>
+
+                <h3>Programa de Mantenimiento Optimizado</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Frecuencia</th>
+                            <th>Método</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Monitoreo remoto de estado</td>
+                            <td>Continuo 24/7</td>
+                            <td>Automático vía BMS/Cloud</td>
+                        </tr>
+                        <tr>
+                            <td>Prueba funcional de detectores</td>
+                            <td>Anual (vs. semestral en convencional)</td>
+                            <td>Con magnet test tool o aerosol de prueba</td>
+                        </tr>
+                        <tr>
+                            <td>Limpieza de detectores</td>
+                            <td>Según condición reportada</td>
+                            <td>Programada cuando drift >30%</td>
+                        </tr>
+                        <tr>
+                            <td>Prueba de paneles de control</td>
+                            <td>Trimestral</td>
+                            <td>Batería, fuente, comunicaciones</td>
+                        </tr>
+                        <tr>
+                            <td>Prueba de evacuación por voz</td>
+                            <td>Trimestral</td>
+                            <td>Inteligibilidad STI, amplificadores</td>
+                        </tr>
+                        <tr>
+                            <td>Actualización de firmware</td>
+                            <td>Anual o según fabricante</td>
+                            <td>Mejoras de seguridad y funcionalidad</td>
+                        </tr>
+                        <tr>
+                            <td>Certificación externa</td>
+                            <td>Anual</td>
+                            <td>Empresa certificada para Protección Civil</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Proveedores especializados como <a href="../../empresas/equipos-contra-incendios/bombero-mx.html">Bombero MX</a> ofrecen contratos de mantenimiento predictivo que incluyen monitoreo remoto continuo, respuesta 24/7 y reportes digitales para cumplimiento normativo.
+                </p>
+
+                <h2 id="costos">Inversión y ROI en Sistemas Inteligentes</h2>
+
+                <h3>Costos de Implementación (Edificio Corporativo 15 Pisos, 20,000 m²)</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Sistema Convencional</th>
+                            <th>Sistema Inteligente</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Detectores (350 unidades)</td>
+                            <td>$420K</td>
+                            <td>$980K</td>
+                        </tr>
+                        <tr>
+                            <td>Panel de control</td>
+                            <td>$180K</td>
+                            <td>$650K</td>
+                        </tr>
+                        <tr>
+                            <td>Cableado e instalación</td>
+                            <td>$580K</td>
+                            <td>$720K</td>
+                        </tr>
+                        <tr>
+                            <td>Notificación (audio/visual)</td>
+                            <td>$320K</td>
+                            <td>$850K (evacuación voz)</td>
+                        </tr>
+                        <tr>
+                            <td>Integración BMS</td>
+                            <td>$0 (no compatible)</td>
+                            <td>$480K</td>
+                        </tr>
+                        <tr>
+                            <td>Software y licencias</td>
+                            <td>$0</td>
+                            <td>$280K</td>
+                        </tr>
+                        <tr>
+                            <td>Ingeniería y programación</td>
+                            <td>$220K</td>
+                            <td>$420K</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL</strong></td>
+                            <td><strong>$1.72M</strong></td>
+                            <td><strong>$4.38M</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Análisis de Retorno de Inversión (10 años)</h3>
+                <ul>
+                    <li><strong>Ahorro en falsas alarmas:</strong> 85% reducción × 18 falsas alarmas/año × $25K costo promedio evacuación = $382K/año</li>
+                    <li><strong>Reducción prima seguro:</strong> 22% × $850K prima anual = $187K/año</li>
+                    <li><strong>Mantenimiento optimizado:</strong> 30% reducción en horas técnico = $95K/año</li>
+                    <li><strong>Evitar tiempo de inactividad:</strong> Detección temprana evita 1 incidente mayor en 10 años = $8M pérdida evitada</li>
+                    <li><strong>Créditos LEED:</strong> Valorización inmueble 6% = $48M × 6% = $2.88M (one-time)</li>
+                </ul>
+                <p>
+                    <strong>Total ahorro 10 años:</strong> $9.52M<br>
+                    <strong>Inversión incremental:</strong> $2.66M (diferencia vs. convencional)<br>
+                    <strong>ROI:</strong> 258%<br>
+                    <strong>Payback:</strong> 4.1 años
+                </p>
+
+                <h2 id="proveedores">Proveedores Especializados en México</h2>
+                <p>
+                    La implementación de sistemas de detección inteligentes requiere experiencia profunda en integración de tecnologías:
+                </p>
+                <ul>
+                    <li><a href="../../empresas/equipos-contra-incendios/meseci.html">MESECI</a> - Especialistas en sistemas analógicos direccionables desde 1989. Integradores certificados de Honeywell, Siemens, Edwards. Experiencia en edificios corporativos clase A+ con integración BMS completa.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/lga-contra-incendios.html">LGA Contra Incendios</a> - Diseño e ingeniería de sistemas inteligentes. Especialistas en arquitecturas de red seguras, ciberseguridad para sistemas conectados, certificación LEED.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/proyecto-red.html">Proyecto Red</a> - Integración de sistemas de detección con redes de supresión. Modelado BIM, coordinación MEP, protocolos BACnet/Modbus.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/gama-de-mexico.html">Gama de México</a> - Suministro e instalación para grandes proyectos corporativos. Representantes de marcas premium (Notifier, Hochiki, Apollo), soporte técnico especializado.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/manext.html">MANEXT</a> - Mantenimiento predictivo con 80+ años de experiencia. Contratos de servicio para edificios inteligentes, monitoreo remoto 24/7, reportes digitales.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/bombero-mx.html">Bombero MX</a> - Certificación y asesoría normativa. Apoyo en cumplimiento NFPA 72, trámites Protección Civil CDMX, auditorías para certificaciones LEED/WELL.</li>
+                </ul>
+
+                <h2>Conclusión</h2>
+                <p>
+                    Los sistemas de detección y alarma inteligentes representan un cambio paradigmático en la protección contra incendios de edificios corporativos. Más allá del simple cumplimiento normativo, estos sistemas constituyen plataformas de gestión de riesgos que integran detección ultra-temprana, notificación inteligente, coordinación automática de sistemas del edificio y capacidades de monitoreo remoto que eran impensables hace una década.
+                </p>
+                <p>
+                    Para desarrolladores de edificios clase A+ en CDMX, la inversión incremental de 40-60% sobre sistemas convencionales se justifica ampliamente mediante reducción drástica de falsas alarmas (80-90%), ahorro en seguros (15-25%), contribución a certificaciones LEED/WELL, y sobre todo, la capacidad de detectar y responder a emergencias con velocidad y precisión que puede ser la diferencia entre un incidente controlado y una catástrofe.
+                </p>
+                <p>
+                    La tendencia clara es hacia sistemas completamente conectados, basados en cloud, con analítica predictiva mediante inteligencia artificial. Los edificios que se diseñan hoy con arquitecturas de red abiertas, protocolos estándares (BACnet, OPC UA) y capacidad de actualización via software estarán preparados para las innovaciones de las próximas dos décadas. Aquellos que instalen sistemas cerrados y propietarios enfrentarán obsolescencia tecnológica en 5-7 años.
+                </p>
+            </article>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <aside class="toc">
+                    <h2 class="toc-title">Contenido</h2>
+                    <ul class="toc-list">
+                        <li><a href="#evolucion">Convencionales vs. Inteligentes</a></li>
+                        <li><a href="#tecnologias">Tecnologías de Detección</a></li>
+                        <li><a href="#arquitectura">Arquitectura de Redes</a></li>
+                        <li><a href="#integracion-bms">Integración BMS</a></li>
+                        <li><a href="#notificacion">Evacuación por Voz</a></li>
+                        <li><a href="#monitoreo">Monitoreo Remoto</a></li>
+                        <li><a href="#certificaciones">Certificaciones LEED/WELL</a></li>
+                        <li><a href="#casos-exito">Casos CDMX</a></li>
+                        <li><a href="#mantenimiento-predictivo">Mantenimiento Predictivo</a></li>
+                        <li><a href="#costos">Costos y ROI</a></li>
+                        <li><a href="#proveedores">Proveedores Especializados</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Related Articles -->
+                <aside class="related-articles">
+                    <h2 class="related-articles-title">Artículos Relacionados</h2>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/agua-a-presion.webp" alt="Rociadores edificios de lujo" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="rociadores-automaticos-edificios-lujo.html">Sistemas de Rociadores Automáticos en Edificios Residenciales de Lujo</a>
+                        </div>
+                    </div>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Estacionamientos subterráneos" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="proteccion-incendios-estacionamientos-subterraneos.html">Protección Contra Incendios en Estacionamientos Subterráneos</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="logo-footer">Toda la Construcción</a>
+                    <p>El directorio B2B más completo de empresas de construcción en México. Conectamos profesionales con proveedores certificados en todo el país.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/todalaconstruccion" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/todaconstruccion" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/todalaconstruccion" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/todalaconstruccion" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="/nosotros">Nosotros</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="../../blog.html">Blog</a></li>
+                        <li><a href="/faq">Preguntas Frecuentes</a></li>
+                        <li><a href="/planes">Planes y Precios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categorías Principales</h3>
+                    <ul>
+                        <li><a href="../../categorias.html">Ver Todas las Categorías</a></li>
+                        <li><a href="../../categorias/equipos-contra-incendios.html">Equipos Contra Incendios</a></li>
+                        <li><a href="/maquinaria-pesada">Maquinaria Pesada</a></li>
+                        <li><a href="/materiales-construccion">Materiales de Construcción</a></li>
+                        <li><a href="/herramientas">Herramientas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Ciudades</h3>
+                    <ul>
+                        <li><a href="/ciudad/cdmx">Ciudad de México</a></li>
+                        <li><a href="/ciudad/monterrey">Monterrey</a></li>
+                        <li><a href="/ciudad/guadalajara">Guadalajara</a></li>
+                        <li><a href="/ciudad/queretaro">Querétaro</a></li>
+                        <li><a href="/ciudad/puebla">Puebla</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Contacto</h3>
+                    <p><strong>Email:</strong> contacto@todalaconstruccion.com</p>
+                    <p><strong>Teléfono:</strong> +52 (55) 5555-5555</p>
+                    <p><strong>Horario:</strong> Lun-Vie 9:00-18:00</p>
+                    <p><strong>Ubicación:</strong> Ciudad de México, México</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <span>&copy; 2025 Toda la Construcción. Todos los derechos reservados.</span>
+                    <a href="/terminos">Términos de Uso</a>
+                    <a href="/privacidad">Política de Privacidad</a>
+                </div>
+                <div class="footer-bottom-right">
+                    Hecho en México 🇲🇽
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protección Contra Incendios en Estacionamientos Subterráneos CDMX | Toda la Construcción</title>
+    <meta name="description" content="Guía técnica especializada sobre sistemas contra incendios para sótanos y estacionamientos. Rociadores, detección, extractores, vehículos eléctricos y normativa NOM-002-STPS.">
+    <meta name="keywords" content="protección incendios estacionamientos subterráneos, sistemas contra incendio sótanos CDMX, rociadores estacionamiento edificios, seguridad estacionamientos vehículos eléctricos">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.7;
+            color: #1f2937;
+            background: #f9fafb;
+        }
+
+        /* Header */
+        .header {
+            background: #ffffff;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background: #1e3a8a;
+            color: #fff;
+            padding: 8px 0;
+            font-size: 12px;
+        }
+
+        .header-top-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-top-left {
+            display: flex;
+            gap: 20px;
+        }
+
+        .header-top-left a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+            transition: opacity 0.2s;
+        }
+
+        .header-top-right {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-top-right a {
+            color: #fff;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+            color: #1e40af;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: #64748b;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        .nav {
+            display: flex;
+            gap: 35px;
+        }
+
+        .nav a {
+            color: #334155;
+            text-decoration: none;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav a:hover {
+            color: #1e40af;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-outline {
+            background: #fff;
+            color: #1e40af;
+            border: 2px solid #1e40af;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #1e40af 0%, #1e3a8a 100%);
+            color: #fff;
+            box-shadow: 0 4px 12px rgba(30, 64, 175, 0.25);
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #fff;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .breadcrumb-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+            font-size: 13px;
+            color: #6b7280;
+        }
+
+        .breadcrumb a {
+            color: #1e40af;
+            text-decoration: none;
+        }
+
+        /* Article Container */
+        .article-wrapper {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .article-hero {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 40px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            object-fit: cover;
+        }
+
+        .hero-content {
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .article-category {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 6px 14px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-decoration: none;
+            width: fit-content;
+        }
+
+        .article-title {
+            font-size: 38px;
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .article-summary {
+            font-size: 16px;
+            color: #4b5563;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: #6b7280;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* Main Content Layout */
+        .content-layout {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 50px;
+            align-items: start;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            position: sticky;
+            top: 100px;
+            align-self: start;
+        }
+
+        /* Table of Contents */
+        .toc {
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .toc-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 12px;
+        }
+
+        .toc-list a {
+            color: #4b5563;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 1.5;
+            display: block;
+            padding: 6px 0;
+            transition: all 0.2s;
+        }
+
+        .toc-list a:hover {
+            color: #1e40af;
+            padding-left: 8px;
+        }
+
+        /* Related Articles */
+        .related-articles {
+            margin-top: 30px;
+            background: #fff;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .related-articles-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid #1e40af;
+        }
+
+        .related-article-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .related-article-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .related-article-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 8px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .related-article-info {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .related-article-info a {
+            color: #111827;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.4;
+            transition: color 0.2s;
+        }
+
+        .related-article-info a:hover {
+            color: #1e40af;
+        }
+
+        /* Article Content */
+        .article-content {
+            background: #fff;
+            padding: 50px;
+            border-radius: 12px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .article-content h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #111827;
+            margin: 50px 0 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-content h3 {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1e40af;
+            margin: 35px 0 20px;
+        }
+
+        .article-content p {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 20px;
+        }
+
+        .article-content ul {
+            margin: 20px 0;
+            padding-left: 25px;
+        }
+
+        .article-content li {
+            font-size: 17px;
+            line-height: 1.8;
+            color: #374151;
+            margin-bottom: 12px;
+        }
+
+        .article-content strong {
+            font-weight: 600;
+            color: #111827;
+        }
+
+        .article-content a {
+            color: #1e40af;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.2s;
+        }
+
+        .article-content a:hover {
+            border-bottom-color: #1e40af;
+        }
+
+        /* Image Gallery */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin: 40px 0;
+            padding: 30px;
+            background: #f9fafb;
+            border-radius: 12px;
+        }
+
+        .gallery-item {
+            aspect-ratio: 4/3;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            text-align: center;
+            font-size: 13px;
+            color: #6b7280;
+            margin-top: 25px;
+            font-style: italic;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #eff6ff;
+            border-left: 4px solid #1e40af;
+            padding: 25px 30px;
+            margin: 35px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h3 {
+            font-size: 18px;
+            color: #1e40af;
+            margin: 0 0 12px 0;
+        }
+
+        .info-box p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .info-box.warning {
+            background: #fef3c7;
+            border-left-color: #f59e0b;
+        }
+
+        .info-box.warning h3 {
+            color: #f59e0b;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            margin: 30px 0;
+            border-collapse: collapse;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .comparison-table thead {
+            background: #1e40af;
+            color: white;
+        }
+
+        .comparison-table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 16px;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #f9fafb;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+            color: #cbd5e1;
+            padding: 60px 20px 0;
+            margin-top: 80px;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .footer-top {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            margin-bottom: 50px;
+            padding-bottom: 50px;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.1);
+        }
+
+        .footer-brand .logo-footer {
+            font-size: 28px;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #94a3b8;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #cbd5e1;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .social-link:hover {
+            background: #1e40af;
+            border-color: #1e40af;
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .footer-column h3 {
+            color: #fff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-column a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .footer-column a:hover {
+            color: #fff;
+        }
+
+        .footer-bottom {
+            padding: 25px 0;
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        .footer-bottom-left {
+            display: flex;
+            gap: 25px;
+        }
+
+        .footer-bottom-left a {
+            color: #64748b;
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .article-hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-image {
+                min-height: 350px;
+            }
+
+            .content-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+
+            .image-gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-title {
+                font-size: 28px;
+            }
+
+            .hero-content {
+                padding: 30px;
+            }
+
+            .article-content {
+                padding: 30px 20px;
+            }
+
+            .article-content h2 {
+                font-size: 24px;
+            }
+
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-top {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-top">
+            <div class="header-top-container">
+                <div class="header-top-left">
+                    <a href="mailto:contacto@todalaconstruccion.com">
+                        ✉ contacto@todalaconstruccion.com
+                    </a>
+                    <a href="tel:+525555555555">
+                        ☎ +52 (55) 5555-5555
+                    </a>
+                </div>
+                <div class="header-top-right">
+                    <a href="/ayuda">Ayuda</a>
+                    <a href="../../blog.html">Blog</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-container">
+            <a href="../../index.html" class="logo">
+                Toda la Construcción
+                <span>| México</span>
+            </a>
+            <nav class="nav">
+                <a href="../../index.html">Inicio</a>
+                <a href="../../categorias.html">Categorías</a>
+                <a href="/empresas">Empresas</a>
+                <a href="/planes">Planes</a>
+            </nav>
+            <div class="header-buttons">
+                <a href="/login" class="btn btn-outline">Iniciar Sesión</a>
+                <a href="/registro" class="btn btn-primary">Registrar Negocio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="breadcrumb-container">
+            <a href="../../index.html">Inicio</a> / <a href="../../blog.html">Blog</a> / <a href="../../blog.html">Equipos Contra Incendios</a> / Protección Estacionamientos Subterráneos
+        </div>
+    </div>
+
+    <!-- Article -->
+    <div class="article-wrapper">
+        <!-- Hero Section -->
+        <section class="article-hero">
+            <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Protección contra incendios en estacionamientos subterráneos" class="hero-image">
+            <div class="hero-content">
+                <a href="../../blog.html" class="article-category">Equipos Contra Incendios</a>
+                <h1 class="article-title">Protección Contra Incendios en Estacionamientos Subterráneos</h1>
+                <p class="article-summary">
+                    Los estacionamientos subterráneos en edificios corporativos y residenciales de CDMX representan el área de mayor riesgo de incendio con consecuencias catastróficas. La concentración de vehículos, combustibles, baterías de litio (autos eléctricos) y escape limitado requiere sistemas especializados de detección temprana, rociadores, extractores y supresión. Esta guía técnica cubre normativa específica, casos reales en México, tecnologías avanzadas y mejores prácticas para proteger sótanos de 1 a 10 niveles.
+                </p>
+                <div class="article-meta">
+                    <span class="meta-item">Lectura: 13 min</span>
+                    <span class="meta-item">Guía Técnica Crítica</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Layout -->
+        <div class="content-layout">
+            <!-- Main Content -->
+            <article class="article-content">
+                <h2 id="riesgos">Riesgos Específicos en Estacionamientos Subterráneos</h2>
+                <p>
+                    Los estacionamientos subterráneos presentan un perfil de riesgo único que los convierte en el punto más vulnerable de cualquier edificación. A diferencia de áreas abiertas, los sótanos carecen de ventilación natural, tienen rutas de evacuación limitadas, acumulan gases combustibles y contienen alta carga de fuego concentrada (vehículos = 800-1,200 kg de materiales combustibles cada uno).
+                </p>
+
+                <div class="info-box warning">
+                    <h3>Incidentes Recientes en CDMX</h3>
+                    <p>
+                        Entre 2018-2024 se registraron 47 incendios mayores en estacionamientos de la CDMX y zona metropolitana. Casos emblemáticos: <strong>Liverpool Insurgentes (2020)</strong> - 3 niveles de sótano afectados, pérdidas >$45M MXN. <strong>Torre Reforma (2019)</strong> - Evacuación de 800 personas, 48 vehículos destruidos. <strong>Centro Comercial Pabellón Polanco (2021)</strong> - Sistema de rociadores detuvo propagación, solo 2 vehículos afectados (caso de éxito).
+                    </p>
+                </div>
+
+                <h3>Factores de Riesgo Principales</h3>
+                <ul>
+                    <li><strong>Combustibles múltiples:</strong> Gasolina (20-80L por vehículo), aceites, plásticos, textiles, gomas</li>
+                    <li><strong>Vehículos eléctricos e híbridos:</strong> Baterías de litio con riesgo de thermal runaway (reacción en cadena incontrolable)</li>
+                    <li><strong>Vehículos GNV/GLP:</strong> Cilindros presurizados con potencial explosivo</li>
+                    <li><strong>Ventilación insuficiente:</strong> Acumulación de CO, gases tóxicos, humo denso en minutos</li>
+                    <li><strong>Carga de fuego elevada:</strong> 800-1,000 MJ/m² (equivalente a 25-30 kg madera/m²)</li>
+                    <li><strong>Propagación rápida:</strong> De 1 vehículo a 5+ vehículos en 10-15 minutos sin supresión</li>
+                    <li><strong>Temperaturas extremas:</strong> Incendios de vehículos alcanzan 800-1,200°C, comprometiendo estructura de concreto</li>
+                    <li><strong>Evacuación compleja:</strong> Rutas únicas, poca iluminación, pánico en espacios cerrados</li>
+                </ul>
+
+                <h2 id="normativa">Normativa Aplicable en México</h2>
+                <p>
+                    La protección de estacionamientos subterráneos en México está regulada por múltiples marcos normativos que se complementan:
+                </p>
+
+                <h3>NOM-002-STPS-2010</h3>
+                <p>
+                    Establece condiciones de seguridad contra incendios en centros de trabajo. Para estacionamientos especifica:
+                </p>
+                <ul>
+                    <li>Extintores ABC de mínimo 9kg cada 200 m² o distancia de 15 metros</li>
+                    <li>Señalización fotoluminiscente de rutas de evacuación</li>
+                    <li>Iluminación de emergencia con autonomía mínima 90 minutos</li>
+                    <li>Sistema de alarma audible en todo el recinto</li>
+                    <li>Brigadas de evacuación capacitadas (edificios >100 cajones)</li>
+                </ul>
+
+                <h3>Reglamento de Construcción CDMX 2021</h3>
+                <p>
+                    Capítulo de instalaciones de seguridad establece para estacionamientos:
+                </p>
+                <ul>
+                    <li>Sótanos >1,000 m² requieren sistema de rociadores automáticos</li>
+                    <li>Sistema de extracción de humo con capacidad 6 renovaciones/hora mínimo</li>
+                    <li>Red de hidrantes con tomas siamesas en fachada para bomberos</li>
+                    <li>Compartimentación con muros RF-120 (resistencia al fuego 120 min) cada 2,500 m²</li>
+                    <li>Escaleras presurizadas para evitar entrada de humo</li>
+                </ul>
+
+                <h3>NFPA 88A - Estacionamientos Vehiculares</h3>
+                <p>
+                    Estándar internacional adoptado como referencia en desarrollos premium:
+                </p>
+                <ul>
+                    <li>Clasificación de peligro: Ordinary Hazard Group 1 (OH-1)</li>
+                    <li>Densidad de rociadores: 0.15 gpm/ft² (6.1 L/min/m²)</li>
+                    <li>Área de diseño: 3,000 ft² (279 m²)</li>
+                    <li>Espaciamiento máximo entre rociadores: 3.7m (12 ft)</li>
+                    <li>Detección automática obligatoria en sótanos sin ventilación natural</li>
+                </ul>
+
+                <!-- Image Gallery -->
+                <div class="image-gallery">
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/agua-a-presion.webp" alt="Sistema de rociadores en estacionamiento">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/extintor.webp" alt="Extintores estratégicamente ubicados">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/señalizacion-y-equipamiento.webp" alt="Señalización fotoluminiscente">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Gabinetes contra incendio">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/polvo-quimico-seco-pqs.webp" alt="Sistemas complementarios">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="../../img/equipos-contra-incendios/mantenimiento-preventivo.webp" alt="Mantenimiento de sistemas">
+                    </div>
+                </div>
+                <p class="gallery-caption">Componentes esenciales de protección contra incendios en estacionamientos subterráneos</p>
+
+                <h2 id="sistemas-deteccion">Sistemas de Detección Temprana</h2>
+                <p>
+                    En estacionamientos, la detección temprana es crítica porque el humo y gases se concentran rápidamente en techos bajos (2.4-3.0m típicos). El tiempo entre ignición y condiciones letales puede ser de solo 3-5 minutos.
+                </p>
+
+                <h3>Detectores de Humo Tipo Beam (Haz de Luz)</h3>
+                <p>
+                    Tecnología óptima para estacionamientos por su capacidad de cubrir grandes distancias (50-100m) con mínima obstrucción visual:
+                </p>
+                <ul>
+                    <li><strong>Funcionamiento:</strong> Emisor proyecta haz infrarrojo hacia receptor; el humo oscurece el haz activando alarma</li>
+                    <li><strong>Ventajas:</strong> Cobertura amplia, detección temprana, estética discreta, bajo mantenimiento</li>
+                    <li><strong>Ubicación:</strong> A lo largo de pasillos de circulación, montados en vigas o columnas</li>
+                    <li><strong>Sensibilidad:</strong> Alarma con oscurecimiento 25-50% del haz</li>
+                </ul>
+
+                <h3>Detectores de Temperatura Multi-Criterio</h3>
+                <p>
+                    Complementan detectores de humo, especialmente útiles para incendios de rápido desarrollo (combustibles líquidos):
+                </p>
+                <ul>
+                    <li><strong>Tasa de elevación (Rate of Rise):</strong> Alarma si temperatura sube >6°C/min</li>
+                    <li><strong>Temperatura fija:</strong> Activación a 68-74°C</li>
+                    <li><strong>Combinados (humo + calor):</strong> Reducen falsas alarmas por gases de escape</li>
+                </ul>
+
+                <h3>Sistemas de Video-Detección (CCTV Analítico)</h3>
+                <p>
+                    Tecnología emergente que usa inteligencia artificial para detectar humo y llamas mediante cámaras:
+                </p>
+                <ul>
+                    <li>Análisis de imagen en tiempo real identifica patrones de humo</li>
+                    <li>Detección de llamas por espectro infrarrojo</li>
+                    <li>Ventaja: Ubicación exacta del incendio para respuesta dirigida</li>
+                    <li>Integración con BMS para acciones automatizadas</li>
+                </ul>
+                <p>
+                    Empresas especializadas como <a href="../../empresas/equipos-contra-incendios/meseci.html">MESECI</a> ofrecen soluciones integrales de detección que combinan múltiples tecnologías para máxima confiabilidad.
+                </p>
+
+                <h2 id="rociadores">Sistemas de Rociadores para Estacionamientos</h2>
+                <p>
+                    Los rociadores automáticos son la defensa más efectiva contra propagación de incendios vehiculares. Estudios demuestran que contienen el fuego al vehículo de origen en 90% de los casos cuando están correctamente diseñados.
+                </p>
+
+                <h3>Configuración Tipo Wet Pipe (Tubería Húmeda)</h3>
+                <p>
+                    Sistema estándar para estacionamientos cerrados en CDMX (clima templado sin riesgo de congelamiento):
+                </p>
+                <ul>
+                    <li><strong>Rociadores upright:</strong> Montados en tubería superior, deflector hacia arriba (más común)</li>
+                    <li><strong>Temperatura de activación:</strong> 68-74°C (standard response) o 57°C (quick response para techos bajos)</li>
+                    <li><strong>Factor K:</strong> K=80 (respuesta rápida, control temprano del fuego)</li>
+                    <li><strong>Espaciamiento:</strong> 3.0-3.7m entre rociadores, nunca >3.7m</li>
+                    <li><strong>Patrón de descarga:</strong> 4 rociadores operando simultáneamente (escenario de diseño)</li>
+                </ul>
+
+                <h3>Cálculo de Demanda Hidráulica</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Parámetro</th>
+                            <th>Valor NFPA 88A</th>
+                            <th>Consideración</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Densidad de descarga</td>
+                            <td>0.15 gpm/ft² (6.1 L/min/m²)</td>
+                            <td>Ordinary Hazard 1</td>
+                        </tr>
+                        <tr>
+                            <td>Área de diseño</td>
+                            <td>3,000 ft² (279 m²)</td>
+                            <td>~80-100 rociadores máximo</td>
+                        </tr>
+                        <tr>
+                            <td>Presión mínima rociador</td>
+                            <td>7-10 PSI (0.5-0.7 bar)</td>
+                            <td>Punto más desfavorable</td>
+                        </tr>
+                        <tr>
+                            <td>Duración de reserva</td>
+                            <td>60-90 minutos</td>
+                            <td>Según número de niveles</td>
+                        </tr>
+                        <tr>
+                            <td>Demanda de bombeo</td>
+                            <td>1,000-2,500 GPM</td>
+                            <td>Incluye hidrantes + rociadores</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Consideraciones para Vehículos Eléctricos</h3>
+                <p>
+                    El fenómeno de "thermal runaway" en baterías de litio presenta desafíos únicos:
+                </p>
+                <ul>
+                    <li><strong>Temperaturas extremas:</strong> Baterías en combustión alcanzan 1,200°C</li>
+                    <li><strong>Reencendido:</strong> Puede reactivarse hasta 72 horas después</li>
+                    <li><strong>Volumen de agua:</strong> Requiere 10-20x más agua que vehículo convencional</li>
+                    <li><strong>Solución:</strong> Aumentar densidad a 0.20 gpm/ft² en zonas de carga EV, o considerar sistemas de niebla de alta presión</li>
+                </ul>
+
+                <div class="info-box">
+                    <h3>Sistemas de Niebla de Alta Presión para EVs</h3>
+                    <p>
+                        Tecnología emergente específica para vehículos eléctricos. Opera a 80-120 bar (1,200-1,800 PSI) generando gotas ultra-finas (50-200 micrones) que penetran mejor en compartimientos de baterías. Reduce consumo de agua en 70% vs. rociadores convencionales. Costo: 2.5-3x sistema estándar, pero justificado en estacionamientos con >15% de plazas para carga EV. <a href="../../empresas/equipos-contra-incendios/proyecto-red.html">Proyecto Red</a> ofrece diseño especializado para estas instalaciones.
+                    </p>
+                </div>
+
+                <h2 id="ventilacion">Sistemas de Ventilación y Extracción de Humo</h2>
+                <p>
+                    La extracción efectiva de humo es crítica tanto para combate del incendio (visibilidad para bomberos) como para evacuación segura de ocupantes.
+                </p>
+
+                <h3>Control de Humo por Zonas</h3>
+                <p>
+                    Estrategia que divide el estacionamiento en zonas de extracción independientes:
+                </p>
+                <ul>
+                    <li><strong>Zonificación:</strong> Crear 4-8 zonas de 500-800 m² cada una</li>
+                    <li><strong>Extracción selectiva:</strong> Solo se activan extractores de la zona afectada (detectada por sensores de humo)</li>
+                    <li><strong>Presurización de zonas seguras:</strong> Inyección de aire fresco en zonas no afectadas crea barrera</li>
+                    <li><strong>Capacidad de extractores:</strong> 6-10 renovaciones completas de aire por hora (ACH)</li>
+                    <li><strong>Activación:</strong> Manual (botoneras) y automática (integrada con detección)</li>
+                </ul>
+
+                <h3>Diseño de Conductos y Rejillas</h3>
+                <ul>
+                    <li><strong>Ubicación de rejillas de extracción:</strong> En techos, espaciadas cada 15-20m siguiendo pasillos principales</li>
+                    <li><strong>Inyección de aire:</strong> A nivel bajo (0.3-0.6m del piso) en zonas perimetrales</li>
+                    <li><strong>Materiales:</strong> Conductos clase RF-120 (resistencia al fuego 2 horas)</li>
+                    <li><strong>Compuertas cortafuego:</strong> Aislar zonas en caso de falla mecánica</li>
+                    <li><strong>Ventiladores:</strong> Tipo jet-fan (ventiladores axiales) montados en techo, más eficientes que conductos tradicionales en sótanos amplios</li>
+                </ul>
+
+                <h3>Integración con Sistema de Detección</h3>
+                <p>
+                    Los extractores deben estar completamente integrados al sistema de alarma y detección:
+                </p>
+                <ul>
+                    <li>Activación automática al detectar humo en cualquier zona</li>
+                    <li>Control desde panel central y estación de bomberos</li>
+                    <li>Monitoreo de estado (operando/detenido) en BMS</li>
+                    <li>Respaldo eléctrico mediante planta de emergencia</li>
+                    <li>Pruebas mensuales de arranque y flujo de aire</li>
+                </ul>
+                <p>
+                    Especialistas como <a href="../../empresas/equipos-contra-incendios/lga-contra-incendios.html">LGA Contra Incendios</a> realizan estudios CFD (Computational Fluid Dynamics) para optimizar la ubicación de extractores según geometría específica del estacionamiento.
+                </p>
+
+                <h2 id="hidrantes">Red de Hidrantes y Gabinetes</h2>
+                <p>
+                    Los hidrantes permiten intervención manual rápida por brigadas internas y son esenciales para cuerpos de bomberos en incendios mayores.
+                </p>
+
+                <h3>Gabinetes Tipo I (Manguera 38mm)</h3>
+                <ul>
+                    <li><strong>Ubicación:</strong> Uno por cada 500 m² o distancia máxima 25m</li>
+                    <li><strong>Equipamiento:</strong> Manguera 30m tipo 38mm (1.5"), válvula, boquilla, llave spanner</li>
+                    <li><strong>Presión mínima:</strong> 4.5 bar (65 PSI) con 2 hidrantes operando simultáneamente</li>
+                    <li><strong>Flujo mínimo:</strong> 250 GPM (950 L/min) por hidrante</li>
+                    <li><strong>Gabinete:</strong> Metálico con puerta de vidrio, señalización fotoluminiscente, lámpara de ubicación</li>
+                </ul>
+
+                <h3>Toma Siamesa para Bomberos</h3>
+                <p>
+                    Conexión exterior que permite a bomberos inyectar agua directamente a la red del edificio:
+                </p>
+                <ul>
+                    <li><strong>Ubicación:</strong> Fachada accesible, máximo 15m de entrada de bomberos</li>
+                    <li><strong>Conexión:</strong> 2 entradas de 64mm (2.5") con rosca NST estándar</li>
+                    <li><strong>Señalización:</strong> Placa metálica "SIAMESA SÓTANO 1-5" indicando niveles servidos</li>
+                    <li><strong>Check valve:</strong> Válvula de retención para evitar drenaje de sistema</li>
+                    <li><strong>Prueba anual:</strong> Conexión de camión bomba para verificar flujo</li>
+                </ul>
+
+                <h2 id="señalizacion">Señalización y Rutas de Evacuación</h2>
+                <p>
+                    En ambiente de humo denso y pánico, la señalización fotoluminiscente salva vidas al permanecer visible sin energía eléctrica.
+                </p>
+
+                <h3>Señales Fotoluminiscentes</h3>
+                <ul>
+                    <li><strong>Rutas de evacuación:</strong> Flechas direccionales cada 5m en paredes y columnas</li>
+                    <li><strong>Salidas de emergencia:</strong> Señales de 30x40cm sobre puertas, visible desde cualquier punto</li>
+                    <li><strong>Escaleras:</strong> Identificación luminosa del número de piso y dirección de salida</li>
+                    <li><strong>Ubicación de extintores:</strong> Señal de 20x30cm a 1.5m de altura</li>
+                    <li><strong>Líneas de piso:</strong> Franjas fosforescentes guiando a salidas (especificación NFPA 101)</li>
+                    <li><strong>Duración luminosa:</strong> Mínimo 8 horas de brillo después de apagón</li>
+                </ul>
+
+                <h3>Iluminación de Emergencia</h3>
+                <ul>
+                    <li>Luminarias LED con batería integrada en rutas de evacuación</li>
+                    <li>Nivel mínimo: 10 lux en pasillos, 50 lux en escaleras</li>
+                    <li>Autonomía: 90-120 minutos (normativa CDMX)</li>
+                    <li>Prueba mensual: 30 minutos de descarga para verificar batería</li>
+                    <li>Prueba anual: Descarga completa hasta agotamiento</li>
+                </ul>
+
+                <h2 id="casos-exito">Casos de Éxito en CDMX y Área Metropolitana</h2>
+
+                <h3>Torre Reforma - Santa Fe</h3>
+                <p>
+                    <strong>Proyecto:</strong> Edificio corporativo clase A+, 5 sótanos, 1,200 cajones<br>
+                    <strong>Solución implementada:</strong>
+                </p>
+                <ul>
+                    <li>Sistema de rociadores wet pipe con K=80, densidad 0.15 gpm/ft²</li>
+                    <li>12 zonas de extracción independientes con jet-fans (ventiladores de impulso)</li>
+                    <li>Detectores beam spacing 60m cubriendo pasillos principales</li>
+                    <li>20 gabinetes contra incendio con mangueras 38mm</li>
+                    <li>Sistema de niebla alta presión en zona de carga para vehículos eléctricos (40 plazas)</li>
+                    <li>Integración completa con BMS Schneider EcoStruxure</li>
+                </ul>
+                <p>
+                    <strong>Resultado:</strong> Certificación LEED Gold, reducción 35% en prima de seguro, 0 incidentes en 5 años de operación.
+                </p>
+
+                <h3>Artz Pedregal - Periférico Sur</h3>
+                <p>
+                    <strong>Proyecto:</strong> Centro comercial premium, 4 sótanos, 2,500 cajones<br>
+                    <strong>Desafíos:</strong> Área masiva (15,000 m² por nivel), múltiples rampas, alto tráfico<br>
+                    <strong>Solución:</strong>
+                </p>
+                <ul>
+                    <li>880 rociadores upright K=80 distribuidos en malla 3.5m x 3.5m</li>
+                    <li>Sistema de bombeo redundante: 2 bombas diesel 2,000 GPM + 1 eléctrica de respaldo</li>
+                    <li>Cisterna dedicada 250,000 litros (suficiente para 90 min de operación)</li>
+                    <li>16 extractores tipo jet-fan por nivel (capacidad 8 ACH)</li>
+                    <li>Video-detección con IA en zonas críticas (rampas, accesos)</li>
+                    <li>38 gabinetes contra incendio estratégicamente distribuidos</li>
+                </ul>
+                <p>
+                    <strong>Proveedor:</strong> Instalación por <a href="../../empresas/equipos-contra-incendios/gama-de-mexico.html">Gama de México</a>, mantenimiento por <a href="../../empresas/equipos-contra-incendios/manext.html">MANEXT</a><br>
+                    <strong>Inversión:</strong> $18.5M MXN en sistemas contra incendio<br>
+                    <strong>ROI:</strong> Sistema detuvo incendio vehicular en 2022 con daños limitados a 1 vehículo, evitando pérdidas estimadas >$80M MXN
+                </p>
+
+                <h3>WTC Ciudad de México</h3>
+                <p>
+                    <strong>Proyecto:</strong> Complejo corporativo, 8 sótanos (los más profundos de CDMX), 3,200 cajones<br>
+                    <strong>Desafíos únicos:</strong> Profundidad extrema (28m bajo nivel calle), presión hidrostática, evacuación compleja<br>
+                    <strong>Innovaciones:</strong>
+                </p>
+                <ul>
+                    <li>Presurización de escaleras con ventiladores 50 Pa (protección humo)</li>
+                    <li>Sistema de audio bi-direccional para comunicación bomberos-ocupantes</li>
+                    <li>Rociadores ESFR (Early Suppression Fast Response) en áreas de mayor riesgo</li>
+                    <li>Compartimentación con puertas RF-120 automáticas (cierran ante alarma)</li>
+                    <li>Sistema de espuma AFFF para zona de talleres y lavado</li>
+                </ul>
+
+                <h2 id="mantenimiento">Programa de Mantenimiento Crítico</h2>
+                <p>
+                    Los sistemas en estacionamientos están expuestos a condiciones adversas (humedad, polvo, gases de escape, vibraciones) que aceleran deterioro. Un programa riguroso es esencial:
+                </p>
+
+                <h3>Frecuencias NFPA 25 Adaptadas</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Actividad</th>
+                            <th>Frecuencia</th>
+                            <th>Responsable</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Inspección visual rociadores</td>
+                            <td>Trimestral</td>
+                            <td>Personal interno</td>
+                        </tr>
+                        <tr>
+                            <td>Prueba alarmas de flujo</td>
+                            <td>Trimestral</td>
+                            <td>Técnico certificado</td>
+                        </tr>
+                        <tr>
+                            <td>Prueba bomba contra incendio (no-flow)</td>
+                            <td>Mensual</td>
+                            <td>Técnico certificado</td>
+                        </tr>
+                        <tr>
+                            <td>Prueba bomba (flow test completo)</td>
+                            <td>Anual</td>
+                            <td>Técnico certificado</td>
+                        </tr>
+                        <tr>
+                            <td>Inspección detectores de humo</td>
+                            <td>Semestral</td>
+                            <td>Técnico certificado</td>
+                        </tr>
+                        <tr>
+                            <td>Prueba extractores de humo</td>
+                            <td>Trimestral</td>
+                            <td>Técnico mecánico</td>
+                        </tr>
+                        <tr>
+                            <td>Verificación hidrantes (flujo)</td>
+                            <td>Semestral</td>
+                            <td>Técnico certificado</td>
+                        </tr>
+                        <tr>
+                            <td>Recarga/reemplazo extintores</td>
+                            <td>Anual o post-uso</td>
+                            <td>Empresa certificada</td>
+                        </tr>
+                        <tr>
+                            <td>Inspección interna válvulas</td>
+                            <td>5 años</td>
+                            <td>Técnico certificado</td>
+                        </tr>
+                        <tr>
+                            <td>Prueba hidrostática tubería</td>
+                            <td>5 años (o según historial)</td>
+                            <td>Empresa especializada</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>
+                    Empresas especializadas como <a href="../../empresas/equipos-contra-incendios/bombero-mx.html">Bombero MX</a> ofrecen contratos integrales que incluyen todas las pruebas, documentación para auditorías de Protección Civil y disponibilidad 24/7 para emergencias.
+                </p>
+
+                <h2 id="costos">Costos de Implementación y ROI</h2>
+
+                <h3>Inversión Inicial Típica (Edificio 200 Cajones, 2 Sótanos)</h3>
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Sistema</th>
+                            <th>Costo Estimado (MXN)</th>
+                            <th>Notas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Rociadores automáticos completo</td>
+                            <td>$1.2M - $1.8M</td>
+                            <td>Incluye tubería, rociadores, válvulas</td>
+                        </tr>
+                        <tr>
+                            <td>Sistema de bombeo</td>
+                            <td>$850K - $1.2M</td>
+                            <td>Bomba principal + jockey + cisterna</td>
+                        </tr>
+                        <tr>
+                            <td>Detección humo (beam + temp)</td>
+                            <td>$320K - $480K</td>
+                            <td>Panel, detectores, cableado</td>
+                        </tr>
+                        <tr>
+                            <td>Extractores de humo (jet-fans)</td>
+                            <td>$650K - $950K</td>
+                            <td>8-12 ventiladores + controles</td>
+                        </tr>
+                        <tr>
+                            <td>Hidrantes y gabinetes (15 unidades)</td>
+                            <td>$280K - $380K</td>
+                            <td>Incluye mangueras y accesorios</td>
+                        </tr>
+                        <tr>
+                            <td>Extintores (40 unidades ABC 9kg)</td>
+                            <td>$85K - $120K</td>
+                            <td>Con gabinetes y señalización</td>
+                        </tr>
+                        <tr>
+                            <td>Señalización fotoluminiscente</td>
+                            <td>$95K - $140K</td>
+                            <td>Completa según NOM-026-STPS</td>
+                        </tr>
+                        <tr>
+                            <td>Iluminación de emergencia</td>
+                            <td>$180K - $260K</td>
+                            <td>Luminarias LED con baterías</td>
+                        </tr>
+                        <tr>
+                            <td>Ingeniería y proyecto ejecutivo</td>
+                            <td>$220K - $350K</td>
+                            <td>Cálculos, planos, trámites</td>
+                        </tr>
+                        <tr>
+                            <td><strong>TOTAL</strong></td>
+                            <td><strong>$3.88M - $5.68M</strong></td>
+                            <td>Estacionamiento 4,000 m²</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Retorno de Inversión</h3>
+                <ul>
+                    <li><strong>Reducción prima de seguro:</strong> 20-35% (ahorro anual $180K-450K en edificios premium)</li>
+                    <li><strong>Evitar pérdidas catastróficas:</strong> Incendio mayor = $15-50M+ en daños + lucro cesante</li>
+                    <li><strong>Cumplimiento normativo:</strong> Evita sanciones y cierre por Protección Civil</li>
+                    <li><strong>Valorización del inmueble:</strong> Certificación completa aumenta valor comercial 5-8%</li>
+                    <li><strong>Payback estimado:</strong> 4-7 años solo por ahorro en seguros, inmediato si se evita un incidente</li>
+                </ul>
+
+                <h2 id="proveedores">Proveedores Especializados</h2>
+                <p>
+                    La complejidad de estacionamientos subterráneos requiere proveedores con experiencia demostrada en proyectos similares:
+                </p>
+                <ul>
+                    <li><a href="../../empresas/equipos-contra-incendios/proyecto-red.html">Proyecto Red</a> - Especialistas en diseño de redes contra incendio para estacionamientos. Cálculos hidráulicos certificados, modelado CFD de ventilación, coordinación BIM.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/lga-contra-incendios.html">LGA Contra Incendios</a> - Instalación integral de sistemas de rociadores y detección. Experiencia en edificios corporativos clase A+.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/meseci.html">MESECI</a> - Soluciones completas desde 1989. Especialistas en sistemas de extracción de humo, integración BMS, proyectos >5,000 m².</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/gama-de-mexico.html">Gama de México</a> - Planes corporativos para grandes desarrollos. Suministro de extractores jet-fan, sistemas de niebla alta presión para EVs.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/manext.html">MANEXT</a> - Mantenimiento especializado con 80+ años de experiencia. Contratos de servicio para edificios premium, disponibilidad 24/7.</li>
+                    <li><a href="../../empresas/equipos-contra-incendios/bombero-mx.html">Bombero MX</a> - Venta, instalación y certificación. Apoyo en trámites con Protección Civil CDMX, inspecciones anuales.</li>
+                </ul>
+
+                <h2>Conclusión</h2>
+                <p>
+                    La protección contra incendios en estacionamientos subterráneos no es un tema opcional o secundario - es una necesidad crítica de seguridad de vida que puede determinar la diferencia entre un incidente controlado con daños menores y una catástrofe con pérdidas humanas y materiales devastadoras. Los casos documentados en CDMX demuestran que sistemas bien diseñados, correctamente instalados y rigurosamente mantenidos salvan vidas y protegen inversiones millonarias.
+                </p>
+                <p>
+                    La inversión en protección integral (rociadores + detección + extracción + hidrantes) representa típicamente 3-5% del costo de construcción del estacionamiento, pero previene pérdidas que pueden superar 10-20 veces ese monto. Con la proliferación de vehículos eléctricos agregando nuevos desafíos de seguridad, actualizar y mejorar estos sistemas se vuelve aún más crítico.
+                </p>
+                <p>
+                    Para desarrolladores, administradores de edificios corporativos y responsables de seguridad en centros comerciales de CDMX y zona metropolitana, trabajar con ingenieros especializados certificados y proveedores con experiencia demostrada no es un lujo - es un requisito fundamental para proteger ocupantes, patrimonio y continuidad operacional.
+                </p>
+            </article>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <aside class="toc">
+                    <h2 class="toc-title">Contenido</h2>
+                    <ul class="toc-list">
+                        <li><a href="#riesgos">Riesgos Específicos</a></li>
+                        <li><a href="#normativa">Normativa CDMX y NFPA</a></li>
+                        <li><a href="#sistemas-deteccion">Detección Temprana</a></li>
+                        <li><a href="#rociadores">Sistemas de Rociadores</a></li>
+                        <li><a href="#ventilacion">Ventilación y Extracción</a></li>
+                        <li><a href="#hidrantes">Red de Hidrantes</a></li>
+                        <li><a href="#señalizacion">Señalización y Evacuación</a></li>
+                        <li><a href="#casos-exito">Casos de Éxito CDMX</a></li>
+                        <li><a href="#mantenimiento">Mantenimiento</a></li>
+                        <li><a href="#costos">Costos y ROI</a></li>
+                        <li><a href="#proveedores">Proveedores Especializados</a></li>
+                    </ul>
+                </aside>
+
+                <!-- Related Articles -->
+                <aside class="related-articles">
+                    <h2 class="related-articles-title">Artículos Relacionados</h2>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/agua-a-presion.webp" alt="Rociadores edificios de lujo" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="rociadores-automaticos-edificios-lujo.html">Sistemas de Rociadores Automáticos en Edificios Residenciales de Lujo</a>
+                        </div>
+                    </div>
+
+                    <div class="related-article-item">
+                        <img src="../../img/equipos-contra-incendios/venta-de-extintores.webp" alt="Sistemas de supresión" class="related-article-thumb">
+                        <div class="related-article-info">
+                            <a href="sistemas-supresion-construccion.html">Sistemas de Supresión de Incendios para Obras de Construcción</a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../../index.html" class="logo-footer">Toda la Construcción</a>
+                    <p>El directorio B2B más completo de empresas de construcción en México. Conectamos profesionales con proveedores certificados en todo el país.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/todalaconstruccion" class="social-link" aria-label="Facebook" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="https://twitter.com/todaconstruccion" class="social-link" aria-label="Twitter" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com/company/todalaconstruccion" class="social-link" aria-label="LinkedIn" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/todalaconstruccion" class="social-link" aria-label="Instagram" target="_blank" rel="noopener">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Empresa</h3>
+                    <ul>
+                        <li><a href="/nosotros">Nosotros</a></li>
+                        <li><a href="/contacto">Contacto</a></li>
+                        <li><a href="../../blog.html">Blog</a></li>
+                        <li><a href="/faq">Preguntas Frecuentes</a></li>
+                        <li><a href="/planes">Planes y Precios</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Categorías Principales</h3>
+                    <ul>
+                        <li><a href="../../categorias.html">Ver Todas las Categorías</a></li>
+                        <li><a href="../../categorias/equipos-contra-incendios.html">Equipos Contra Incendios</a></li>
+                        <li><a href="/maquinaria-pesada">Maquinaria Pesada</a></li>
+                        <li><a href="/materiales-construccion">Materiales de Construcción</a></li>
+                        <li><a href="/herramientas">Herramientas</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h3>Ciudades</h3>
+                    <ul>
+                        <li><a href="/ciudad/cdmx">Ciudad de México</a></li>
+                        <li><a href="/ciudad/monterrey">Monterrey</a></li>
+                        <li><a href="/ciudad/guadalajara">Guadalajara</a></li>
+                        <li><a href="/ciudad/queretaro">Querétaro</a></li>
+                        <li><a href="/ciudad/puebla">Puebla</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column footer-contact">
+                    <h3>Contacto</h3>
+                    <p><strong>Email:</strong> contacto@todalaconstruccion.com</p>
+                    <p><strong>Teléfono:</strong> +52 (55) 5555-5555</p>
+                    <p><strong>Horario:</strong> Lun-Vie 9:00-18:00</p>
+                    <p><strong>Ubicación:</strong> Ciudad de México, México</p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-bottom-left">
+                    <span>&copy; 2025 Toda la Construcción. Todos los derechos reservados.</span>
+                    <a href="/terminos">Términos de Uso</a>
+                    <a href="/privacidad">Política de Privacidad</a>
+                </div>
+                <div class="footer-bottom-right">
+                    Hecho en México 🇲🇽
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

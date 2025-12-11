@@ -1,0 +1,57 @@
+# Robots.txt para Toda la Construcción
+# https://todalaconstruccion.com/robots.txt
+
+# Permitir acceso a todos los bots principales
+User-agent: *
+Allow: /
+
+# Rutas bloqueadas (cuando se implementen)
+Disallow: /admin/
+Disallow: /api/
+Disallow: /panel/
+Disallow: /dashboard/
+Disallow: /login
+Disallow: /registro
+Disallow: /checkout/
+Disallow: /cart/
+
+# Permitir acceso a recursos estáticos
+Allow: /css/
+Allow: /js/
+Allow: /img/
+Allow: /assets/
+
+# Googlebot específico
+User-agent: Googlebot
+Allow: /
+
+# Googlebot para imágenes
+User-agent: Googlebot-Image
+Allow: /img/
+Allow: /assets/
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Bloquear bots maliciosos conocidos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+# Sitemap
+Sitemap: https://todalaconstruccion.com/sitemap.xml
+Sitemap: https://todalaconstruccion.com/sitemap-categories.xml
+Sitemap: https://todalaconstruccion.com/sitemap-companies.xml
+Sitemap: https://todalaconstruccion.com/sitemap-cities.xml
+
+# Crawl-delay general (milisegundos entre requests)
+Crawl-delay: 1
